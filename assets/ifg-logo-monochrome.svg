@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 270" role="img" aria-labelledby="title desc">
+  <title id="title">Instituto Federal de Goiás</title>
+  <desc id="desc">Marca do IFG em versão monocromática branca, sem fundo.</desc>
+  <g fill="#fff">
+    <circle cx="76" cy="104" r="20"/>
+    <rect x="111" y="84" width="39" height="39" rx="4"/>
+    <rect x="157" y="84" width="39" height="39" rx="4"/>
+    <rect x="55" y="130" width="39" height="39" rx="4"/>
+    <rect x="101" y="130" width="39" height="39" rx="4"/>
+    <rect x="55" y="176" width="39" height="39" rx="4"/>
+    <rect x="101" y="176" width="39" height="39" rx="4"/>
+    <rect x="147" y="176" width="39" height="39" rx="4"/>
+    <rect x="55" y="222" width="39" height="39" rx="4"/>
+    <rect x="101" y="222" width="39" height="39" rx="4"/>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif">
+    <text x="218" y="150" font-size="37" font-weight="700" letter-spacing=".2">INSTITUTO FEDERAL</text>
+    <text x="218" y="194" font-size="37" font-weight="700" letter-spacing=".2">DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA</text>
+    <text x="218" y="244" font-size="42" font-weight="400">Goiás</text>
+  </g>
+</svg>
