@@ -540,6 +540,124 @@
     .reveal .slides section.premium-slide.cover .meta { margin-top: 12px; padding-top: 14px; }
   }
 
+  
+  /* Tipografia reforçada para leitura em projetor de baixa resolução */
+  .reveal .slides section.premium-slide:not(.cover) p {
+    font-size: .92em;
+    line-height: 1.32;
+  }
+  .reveal .slides section.premium-slide:not(.cover) li,
+  .reveal .slides section.premium-slide:not(.cover) .list-clean li {
+    font-size: .90em !important;
+    line-height: 1.30;
+    margin-bottom: 12px;
+  }
+  .reveal .slides section.premium-slide h2 {
+    font-size: 2.24em;
+    line-height: 1.035;
+    margin-bottom: 23px;
+  }
+  .reveal .slides section.premium-slide h3 {
+    font-size: 1.18em;
+    line-height: 1.12;
+  }
+  .reveal .slides section.premium-slide .eyebrow {
+    font-size: .51em;
+    letter-spacing: .17em;
+    margin-bottom: 18px;
+  }
+  .reveal .slides section.premium-slide .lead {
+    font-size: 1.20em !important;
+    line-height: 1.15 !important;
+  }
+  .reveal .slides section.premium-slide .card p {
+    font-size: .86em;
+    line-height: 1.31;
+  }
+  .reveal .slides section.premium-slide .card .num {
+    font-size: .61em;
+  }
+  .reveal .slides section.premium-slide .stat span {
+    font-size: .61em;
+    line-height: 1.28;
+  }
+  .reveal .slides section.premium-slide .diagram-row b {
+    font-size: .76em;
+  }
+  .reveal .slides section.premium-slide .diagram-row span {
+    font-size: .71em;
+    line-height: 1.32;
+  }
+  .reveal .slides section.premium-slide .references {
+    font-size: .62em !important;
+    line-height: 1.35 !important;
+  }
+  .reveal .slides section.premium-slide .credits {
+    font-size: .58em !important;
+    line-height: 1.35 !important;
+  }
+  .reveal .slides section.premium-slide .tiny {
+    font-size: .53em !important;
+    line-height: 1.32 !important;
+  }
+  .reveal .slides section.premium-slide .photo-caption {
+    font-size: .54em !important;
+  }
+  .reveal .slides section.premium-slide .pill,
+  .reveal .slides section.premium-slide .badge {
+    font-size: .54em;
+  }
+  .reveal .slides section.premium-slide .source,
+  .reveal .slides section.premium-slide .footer-mark {
+    font-size: .46em;
+  }
+
+  /* Marca oficial do IFG em branco monocromático e fundo transparente */
+  .reveal .slides section.premium-slide.cover .ifg-logo {
+    display: block;
+    width: clamp(245px, 23vw, 315px);
+    height: auto;
+    max-height: 84px;
+    object-fit: contain;
+    object-position: left center;
+    margin: 0 0 20px;
+    opacity: .98;
+  }
+  .reveal .slides section.premium-slide.cover h1 {
+    font-size: 4.6em;
+    line-height: .93;
+    margin-bottom: 20px;
+  }
+  .reveal .slides section.premium-slide.cover .kicker {
+    font-size: .54em;
+    margin-bottom: 20px;
+  }
+  .reveal .slides section.premium-slide.cover .subtitle {
+    font-size: 1.22em;
+    line-height: 1.24;
+    margin-bottom: 16px;
+  }
+  .reveal .slides section.premium-slide.cover .cover-description {
+    font-size: .84em;
+    line-height: 1.36;
+  }
+  .reveal .slides section.premium-slide.cover .meta b {
+    font-size: .54em;
+  }
+  .reveal .slides section.premium-slide.cover .meta span {
+    font-size: .72em;
+    line-height: 1.34;
+  }
+  @media (max-width: 900px) {
+    .reveal .slides section.premium-slide.cover .ifg-logo {
+      width: 230px;
+      margin-bottom: 14px;
+    }
+    .reveal .slides section.premium-slide.cover h1 {
+      font-size: 3.9em;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -549,6 +667,7 @@
 <section class="dark cover premium-slide" data-background-transition="fade" style="--hero-image: url('https://static.wixstatic.com/media/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png/v1/fill/w_490%2Ch_465%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png')">
   <div class="cover-main">
     <div class="cover-copy">
+      <img class="ifg-logo" src="./assets/ifg-logo-monochrome.svg" alt="Instituto Federal de Goiás" />
       <div class="kicker">LIBRAS · LEITURA E ANÁLISE</div>
       <h1>A<br>surdez</h1>
       <p class="subtitle">Entre o diagnóstico, a linguagem e a experiência de ser surdo</p>
@@ -1000,8 +1119,8 @@
       };
 
       let attempts = 0;
-      while (hasOverflow() && scale > 0.78 && attempts < 12) {
-        scale = Math.max(0.78, scale - 0.02);
+      while (hasOverflow() && scale > 0.82 && attempts < 9) {
+        scale = Math.max(0.82, scale - 0.02);
         slide.style.setProperty('--fit-scale', scale.toFixed(2));
         attempts += 1;
       }
