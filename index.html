@@ -366,6 +366,180 @@
     min-width: 0;
   }
 
+  
+  /* Revisão para projeção em sala: capa sem áreas concorrentes e tipografia ampliada */
+  .reveal .slides section.premium-slide:not(.cover) p {
+    font-size: .84em;
+    line-height: 1.34;
+  }
+  .reveal .slides section.premium-slide:not(.cover) li {
+    font-size: .82em;
+    line-height: 1.32;
+  }
+  .reveal .slides section.premium-slide h2 {
+    font-size: 2.12em;
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+  .reveal .slides section.premium-slide h3 {
+    font-size: 1.10em;
+    line-height: 1.13;
+  }
+  .reveal .slides section.premium-slide .eyebrow {
+    font-size: .48em;
+    margin-bottom: 18px;
+  }
+  .reveal .slides section.premium-slide p.small {
+    font-size: .66em !important;
+    line-height: 1.35;
+  }
+  .reveal .slides section.premium-slide .card p {
+    font-size: .77em;
+    line-height: 1.32;
+  }
+  .reveal .slides section.premium-slide .stat span {
+    font-size: .54em;
+  }
+  .reveal .slides section.premium-slide .diagram-row span {
+    font-size: .64em;
+    line-height: 1.34;
+  }
+  .reveal .slides section.premium-slide .references {
+    font-size: .57em !important;
+    line-height: 1.38 !important;
+  }
+  .reveal .slides section.premium-slide .credits {
+    font-size: .53em !important;
+    line-height: 1.38 !important;
+  }
+  .reveal .slides section.premium-slide .tiny {
+    font-size: .49em !important;
+    line-height: 1.35 !important;
+  }
+  .reveal .slides section.premium-slide .photo-caption {
+    font-size: .49em !important;
+  }
+
+  /* Capa em duas colunas independentes; nada fica posicionado por cima do texto */
+  .reveal .slides section.premium-slide.cover {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 62px 84px 58px !important;
+  }
+  .reveal .slides section.premium-slide.cover::after { display: none; }
+  .reveal .slides section.premium-slide.cover > .cover-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(270px, .65fr);
+    align-items: center;
+    gap: 44px;
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .reveal .slides section.premium-slide.cover .cover-copy {
+    position: relative;
+    min-width: 0;
+    max-width: 860px;
+  }
+  .reveal .slides section.premium-slide.cover .kicker {
+    font-size: .52em;
+    line-height: 1.25;
+    margin-bottom: 26px;
+    letter-spacing: .19em;
+  }
+  .reveal .slides section.premium-slide.cover h1 {
+    font-size: 4.35em;
+    line-height: .94;
+    margin-bottom: 22px;
+    max-width: 730px;
+  }
+  .reveal .slides section.premium-slide.cover .subtitle {
+    font-size: 1.15em;
+    line-height: 1.25;
+    max-width: 760px;
+    margin: 0 0 16px;
+  }
+  .reveal .slides section.premium-slide.cover .cover-description {
+    max-width: 760px;
+    font-size: .78em;
+    line-height: 1.4;
+    color: rgba(255,255,255,.78) !important;
+    margin: 0;
+  }
+  .reveal .slides section.premium-slide.cover .cover-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+  }
+  .reveal .slides section.premium-slide.cover .book-shot {
+    position: static !important;
+    display: block;
+    width: min(100%, 330px);
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+    border-radius: 2px;
+    opacity: .96;
+    transform: none;
+    filter: drop-shadow(0 28px 38px rgba(0,0,0,.5));
+  }
+  .reveal .slides section.premium-slide.cover .meta {
+    position: relative !important;
+    inset: auto !important;
+    display: grid;
+    grid-template-columns: 1.35fr .8fr 1.2fr;
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    flex: 0 0 auto;
+    margin: 22px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,.3);
+  }
+  .reveal .slides section.premium-slide.cover .meta > div {
+    min-width: 0;
+  }
+  .reveal .slides section.premium-slide.cover .meta b {
+    display: block;
+    font-size: .48em;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    letter-spacing: .15em;
+    color: rgba(255,255,255,.68) !important;
+  }
+  .reveal .slides section.premium-slide.cover .meta span {
+    display: block;
+    font-size: .67em;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    color: rgba(255,255,255,.94) !important;
+  }
+  @media (max-width: 900px) {
+    .reveal .slides section.premium-slide.cover {
+      padding: 42px !important;
+    }
+    .reveal .slides section.premium-slide.cover > .cover-main {
+      grid-template-columns: minmax(0,1fr) minmax(180px,.55fr);
+      gap: 24px;
+    }
+    .reveal .slides section.premium-slide.cover h1 { font-size: 3.4em; }
+    .reveal .slides section.premium-slide.cover .meta {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+  @media (max-height: 720px) {
+    .reveal .slides section.premium-slide.cover { padding-top: 38px !important; padding-bottom: 38px !important; }
+    .reveal .slides section.premium-slide.cover h1 { font-size: 3.8em; margin-bottom: 14px; }
+    .reveal .slides section.premium-slide.cover .book-shot { max-height: 340px; }
+    .reveal .slides section.premium-slide.cover .meta { margin-top: 12px; padding-top: 14px; }
+  }
+
   </style>
 </head>
 <body>
@@ -373,11 +547,17 @@
 <div class="slides">
 
 <section class="dark cover premium-slide" data-background-transition="fade" style="--hero-image: url('https://static.wixstatic.com/media/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png/v1/fill/w_490%2Ch_465%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png')">
-  <div class="kicker">LIBRAS · LEITURA E ANÁLISE</div>
-  <h1>A<br>surdez</h1>
-  <p class="subtitle">Entre o diagnóstico, a linguagem e a experiência de ser surdo</p>
-  <p class="small" style="color:rgba(255,255,255,.68);max-width:800px;margin-top:14px">Capítulo 3 de <em>LIBRAS? Que língua é essa?</em>, de Audrei Gesser, em diálogo com o filme <em>E seu nome é Jonas</em> (1979).</p>
-  <img class="book-shot" src="https://www.parabolaeditorial.com.br/lojas/00034487/prod/215.jpg?cccfc=22b25232" alt="Capa do livro LIBRAS? Que língua é essa?, de Audrei Gesser">
+  <div class="cover-main">
+    <div class="cover-copy">
+      <div class="kicker">LIBRAS · LEITURA E ANÁLISE</div>
+      <h1>A<br>surdez</h1>
+      <p class="subtitle">Entre o diagnóstico, a linguagem e a experiência de ser surdo</p>
+      <p class="cover-description">Capítulo 3 de <em>LIBRAS? Que língua é essa?</em>, de Audrei Gesser, em diálogo com o filme <em>E seu nome é Jonas</em> (1979).</p>
+    </div>
+    <div class="cover-art">
+      <img class="book-shot" src="https://www.parabolaeditorial.com.br/lojas/00034487/prod/215.jpg?cccfc=22b25232" alt="Capa do livro LIBRAS? Que língua é essa?, de Audrei Gesser">
+    </div>
+  </div>
   <div class="meta">
     <div><b>Instituição</b><span>Instituto Federal de Educação, Ciência e Tecnologia de Goiás</span></div>
     <div><b>Componente</b><span>Libras<br>Docente: Newton Rocha</span></div>
@@ -820,8 +1000,8 @@
       };
 
       let attempts = 0;
-      while (hasOverflow() && scale > 0.68 && attempts < 18) {
-        scale = Math.max(0.68, scale - 0.02);
+      while (hasOverflow() && scale > 0.78 && attempts < 12) {
+        scale = Math.max(0.78, scale - 0.02);
         slide.style.setProperty('--fit-scale', scale.toFixed(2));
         attempts += 1;
       }
