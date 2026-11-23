@@ -341,6 +341,31 @@
     .reveal .slides section.premium-slide.present::before { transform: scale(1.055); }
   }
 
+  
+  /* Ajuste automático para manter todo o conteúdo dentro do slide */
+  .reveal .slides section.premium-slide {
+    font-size: calc(1em * var(--fit-scale, 1));
+    overflow: hidden;
+  }
+  .reveal .slides section.premium-slide .source { display: none !important; }
+  .reveal .slides section.premium-slide > aside.notes { display: none !important; }
+  .reveal .slides section.premium-slide p,
+  .reveal .slides section.premium-slide li,
+  .reveal .slides section.premium-slide h1,
+  .reveal .slides section.premium-slide h2,
+  .reveal .slides section.premium-slide h3,
+  .reveal .slides section.premium-slide .references,
+  .reveal .slides section.premium-slide .credits {
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+  .reveal .slides section.premium-slide .layout-2,
+  .reveal .slides section.premium-slide .layout-3,
+  .reveal .slides section.premium-slide .columns,
+  .reveal .slides section.premium-slide .refs-grid {
+    min-width: 0;
+  }
+
   </style>
 </head>
 <body>
@@ -383,7 +408,7 @@
       <span class="pill">Ideia central do capítulo</span>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 63–64.</div>
+  
   <aside class="notes">A autora apresenta duas grandes formas de conceber a surdez: patologicamente ou culturalmente. O livro assume uma postura crítica à medicalização como explicação exclusiva e à ideia de que a pessoa surda precisa tornar-se “normal” para pertencer à sociedade. Não se trata de negar a dimensão audiológica, mas de questionar sua transformação em destino social.</aside>
 </section>
 
@@ -412,7 +437,7 @@
   </div>
   <div class="rule"></div>
   <p class="lead">Não é apenas uma diferença de vocabulário: cada perspectiva orienta práticas educacionais e relações de poder.</p>
-  <div class="source">GESSER, 2009, p. 63–68.</div>
+  
   <aside class="notes">Faça a ressalva de que o livro não propõe ignorar a medicina ou a audiologia. O problema está em permitir que uma explicação clínica seja a única forma legítima de descrever a experiência surda, apagando as dimensões linguísticas, culturais e políticas.</aside>
 </section>
 
@@ -434,7 +459,7 @@
       <p class="photo-caption">A interação visual e face a face é parte da experiência de aprendizagem em língua de sinais. Fonte: The Learning Center for the Deaf.</p>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 64 e 68–69.</div>
+  
   <aside class="notes">Defina ouvintismo com cuidado: não significa simplesmente que pessoas ouvintes existam ou que a oralização seja sempre inadequada. Refere-se ao conjunto de representações e relações de poder que toma a experiência ouvinte como padrão obrigatório e exige que o sujeito surdo se descreva a partir desse modelo.</aside>
 </section>
 
@@ -460,7 +485,7 @@
       <p class="small" style="margin-top:16px">A história de Sam, narrada por Padden e Humphries, brinca com a mesma inversão: para ele, a menina ouvinte é que é “estranha” por não saber sinalizar.</p>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 65–67.</div>
+  
   <aside class="notes">Use os relatos para mostrar que a identidade não é determinada apenas pelo grau audiométrico. A experiência é atravessada pela língua disponível na família, pelo contato com pares e pela possibilidade de construir pertencimento. No relato de Sam, filho de pais surdos, a criança inicialmente imagina que todo mundo é surdo; é a menina ouvinte que parece diferente.</aside>
 </section>
 
@@ -481,7 +506,7 @@
   </div>
   <div class="rule"></div>
   <p class="muted">Para Gesser, reconhecer a diferença exige uma mudança política: os sujeitos surdos devem participar da definição dos espaços, das práticas e das decisões que lhes dizem respeito.</p>
-  <div class="source">GESSER, 2009, p. 67–69.</div>
+  
   <aside class="notes">A autora compara a construção da normalidade em relação à surdez com outras hierarquias sociais. Evite simplificar como se bastasse “tolerar” ou “aceitar” a pessoa surda. O argumento é que as instituições precisam alterar suas práticas e reconhecer os sujeitos surdos como participantes políticos.</aside>
 </section>
 
@@ -503,7 +528,7 @@
       <p class="photo-caption">Fotografia histórica associada à comunidade surda de Martha’s Vineyard. Fonte: Deaf Services Unlimited.</p>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 69–70; GROCE, 1985.</div>
+  
   <aside class="notes">Martha’s Vineyard é apresentada no capítulo por meio do estudo de Nora Groce. A ilha é um exemplo histórico de como o contexto social pode permitir que a língua de sinais faça parte da vida cotidiana e que pessoas surdas participem da comunidade. Não apresente o caso como sociedade perfeita ou como modelo universal: use-o para demonstrar que a exclusão não é consequência inevitável da surdez.</aside>
 </section>
 
@@ -524,7 +549,7 @@
       <p class="photo-caption">A língua de sinais como prática de interação e transmissão cultural. Fonte: Universidad de Chile.</p>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 70–71.</div>
+  
   <aside class="notes">A autora recupera as campanhas eugênicas que defendiam impedir o contato entre pessoas surdas por medo de uma suposta “degeneração”. É importante tratar isso como história de violência e controle, não como uma divergência científica inocente. A biologia pode descrever causas da surdez, mas não determina direitos nem valor humano.</aside>
 </section>
 
@@ -550,7 +575,7 @@
       <p class="small" style="margin-top:18px">O próprio texto alerta: pessoas com graus semelhantes podem ter relações muito diferentes com a língua de sinais e com a cultura surda.</p>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 72–73; SILMAN; SILVERMAN, 1991 apud SANTOS; LIMA; ROSSI, 2003.</div>
+  
   <aside class="notes">Os números reproduzem a classificação citada por Gesser na edição consultada. Explique que a classificação audiológica é descritiva e não pode ser usada sozinha para inferir identidade, língua de preferência ou pertencimento à comunidade surda. O capítulo destaca que uma pessoa com surdez profunda pode não se identificar culturalmente como surda sinalizante, enquanto alguém com perda leve ou moderada pode ter forte identificação com a comunidade.</aside>
 </section>
 
@@ -574,7 +599,7 @@
       <div class="quote" style="font-size:.93em;margin-top:20px">A pergunta decisiva não é apenas “o dispositivo funciona?”, mas “para quem, em quais condições e com quais escolhas?”</div>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 73–76.</div>
+  
   <aside class="notes">Gesser questiona a crença de que o aparelho auditivo restabelece a audição e permite automaticamente compreender uma língua oral. Sobre implantes, descreve a intervenção como invasiva e os resultados como dependentes de variáveis. Apresente com equilíbrio: tecnologia assistiva pode ter utilidade para algumas pessoas, mas não substitui o acesso linguístico nem deve ser imposta como condição para reconhecimento social.</aside>
 </section>
 
@@ -596,7 +621,7 @@
       <div class="pill" style="margin-top:15px">Vygotsky · Chomsky · Quadros</div>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 76–78.</div>
+  
   <aside class="notes">Este é um dos argumentos mais importantes do capítulo. A autora relaciona desenvolvimento cognitivo, linguagem e interação social. A modalidade visual-gestual permite a aquisição de uma língua sem depender da audição. O problema não é a pessoa não ouvir; é passar períodos sem acesso a uma língua plenamente acessível para organizar experiências, comunicar-se e aprender.</aside>
 </section>
 
@@ -618,7 +643,7 @@
       <p class="photo-caption">Imagem promocional de <em>And Your Name Is Jonah</em>. Fonte: Plex / Gracenote.</p>
     </div>
   </div>
-  <div class="source">AFI, ficha do filme; PINHO; ROMÁRIO, 2025.</div>
+  
   <aside class="notes">Explique a premissa sem repetir a terminologia ofensiva usada historicamente no filme. O American Film Institute confirma que os pais descobrem que o diagnóstico estava errado e que Jonas é surdo. O filme se passa em um contexto de forte valorização do oralismo. Não apresente essa história como retrato universal das pessoas surdas.</aside>
 </section>
 
@@ -641,7 +666,7 @@
   </div>
   <div class="rule" style="margin-top:40px"></div>
   <p class="lead">A virada não é “fazer Jonas ouvir”: é permitir que Jonas compreenda e seja compreendido.</p>
-  <div class="source">Leitura em diálogo com GESSER, 2009, p. 76–80; PEREIRA; CÂNDIDO; SANTOS, 2020.</div>
+  
   <aside class="notes">Conecte cada momento ao capítulo: o diagnóstico reflete a leitura exclusivamente patológica; o oralismo dramatiza a expectativa de normalização; e o encontro com pessoas surdas exemplifica a importância de acesso à língua e à comunidade. A personagem mãe também atravessa um processo de aprendizagem: ela precisa conhecer o universo linguístico do filho.</aside>
 </section>
 
@@ -665,7 +690,7 @@
       <p class="small" style="margin-top:14px">O filme retrata a ASL (Língua de Sinais Americana), não a Libras. A aproximação com Gesser é conceitual, não uma equivalência entre as duas línguas.</p>
     </div>
   </div>
-  <div class="source">PEREIRA; CÂNDIDO; SANTOS, 2020; PINHO; ROMÁRIO, 2025.</div>
+  
   <aside class="notes">Esta é uma ressalva importante para uma apresentação de Libras no Brasil. O filme é estadunidense e os personagens usam ASL. Libras e ASL são línguas distintas. O valor do filme está em oferecer um caso histórico para discutir oralismo, acesso à linguagem e relações familiares; não em definir como todas as pessoas surdas vivem.</aside>
 </section>
 
@@ -690,7 +715,7 @@
       <a class="small" href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm" target="_blank">Consultar o texto da lei ↗</a>
     </div>
   </div>
-  <div class="source">GESSER, 2009, p. 79–80; BRASIL, Lei nº 14.191/2021.</div>
+  
   <aside class="notes">Diferencie o momento do livro do marco legal posterior. Em 2009, Gesser discute a oficialização da Libras e o Decreto 5.626/2005, insistindo que o reconhecimento legal não elimina preconceitos nem garante, por si, mudanças na escola. Como atualização, a Lei 14.191/2021 inseriu na LDB um capítulo sobre educação bilíngue de surdos, definindo Libras como primeira língua e português escrito como segunda língua para os estudantes que optam por essa modalidade.</aside>
 </section>
 
@@ -725,7 +750,7 @@
   </div>
   <div class="rule"></div>
   <p class="small muted">Referências visuais e páginas consultadas: fontes listadas no slide seguinte.</p>
-  <div class="source">Bibliografia consultada em 23 nov. 2026.</div>
+  
   <aside class="notes">A referência principal é o capítulo 3 do livro enviado para a atividade. As referências complementares apoiam a contextualização do filme e a atualização da legislação. A análise fílmica não substitui a leitura do capítulo; foi usada como contraponto para tornar os conceitos mais concretos.</aside>
 </section>
 
@@ -743,7 +768,7 @@
   <p class="credits"><strong>História e recursos tecnológicos:</strong> Gallaudet University — <a href="https://gallaudet.edu/museum/exhibits/history-through-deaf-eyes/language-and-identity/oral-training-in-signing-schools/" target="_blank" rel="noopener">arquivo histórico escolar</a>; Johns Hopkins Medicine — <a href="https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/cochlear-implant-surgery" target="_blank" rel="noopener">implante coclear</a>; Salus University — <a href="https://www.salusuhealth.com/news/2020/04/deaf-history-month-fun-facts.html" target="_blank" rel="noopener">aparelho auditivo</a>.</p>
   <div class="rule"></div>
   <p class="tiny muted">A imagem do filme é material promocional. As demais imagens permanecem vinculadas às páginas de origem; os créditos foram mantidos para identificação das fontes.</p>
-  <div class="source">Acesso às páginas: 23 nov. 2026.</div>
+  
   <aside class="notes">Em caso de exibição pública, mantenha os créditos visuais e confirme as condições de uso definidas por cada fonte. Para a apresentação em sala, as imagens são usadas como apoio à discussão e não substituem as fontes bibliográficas.</aside>
 </section>
 
@@ -752,6 +777,73 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
 <script>
+
+  function fitSlideContent() {
+    const slides = document.querySelectorAll('.reveal .slides section.premium-slide');
+
+    slides.forEach((slide) => {
+      let scale = 1;
+      slide.style.setProperty('--fit-scale', '1');
+      slide.style.overflowY = 'hidden';
+
+      const hasOverflow = () => {
+        const mainOverflow =
+          slide.scrollHeight > slide.clientHeight + 3 ||
+          slide.scrollWidth > slide.clientWidth + 3;
+
+        const textBlocks = slide.querySelectorAll(
+          '.card, .stat, .diagram-row, .references, .credits'
+        );
+        const innerOverflow = Array.from(textBlocks).some((element) =>
+          element.clientHeight > 0 &&
+          (element.scrollHeight > element.clientHeight + 3 ||
+           element.scrollWidth > element.clientWidth + 3)
+        );
+
+        const positioned = Array.from(slide.children).filter((element) =>
+          getComputedStyle(element).position === 'absolute' &&
+          element.getBoundingClientRect().width > 0 &&
+          element.getBoundingClientRect().height > 0
+        );
+        const positionedCollision = positioned.some((element) => {
+          const a = element.getBoundingClientRect();
+          return Array.from(slide.children).some((other) => {
+            if (other === element || getComputedStyle(other).display === 'none') return false;
+            const b = other.getBoundingClientRect();
+            const overlapX = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+            const overlapY = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+            return overlapX > 12 && overlapY > 12;
+          });
+        });
+
+        return mainOverflow || innerOverflow || positionedCollision;
+      };
+
+      let attempts = 0;
+      while (hasOverflow() && scale > 0.68 && attempts < 18) {
+        scale = Math.max(0.68, scale - 0.02);
+        slide.style.setProperty('--fit-scale', scale.toFixed(2));
+        attempts += 1;
+      }
+
+      if (hasOverflow()) {
+        // Último recurso: conteúdo permanece acessível, sem ser cortado ou sobreposto.
+        slide.style.overflowY = 'auto';
+      }
+    });
+  }
+
+  Reveal.on('ready', () => {
+    fitSlideContent();
+    requestAnimationFrame(fitSlideContent);
+  });
+  Reveal.on('slidechanged', () => requestAnimationFrame(fitSlideContent));
+  window.addEventListener('resize', fitSlideContent);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitSlideContent);
+  }
+
+
   Reveal.initialize({
     width: 1600,
     height: 900,
