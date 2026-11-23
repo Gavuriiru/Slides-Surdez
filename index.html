@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A surdez — Libras</title>
+  <title>A surdez | Libras — apresentação</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -126,13 +126,228 @@
       .cover .meta { left:40px; right:40px; grid-template-columns:1fr 1fr; }
       .source { left:40px; }
     }
+  
+  /* PREMIUM EDITORIAL REDESIGN */
+  :root {
+    --premium-black: #070708;
+    --premium-white: #f5f5f2;
+    --premium-muted: rgba(245,245,242,.76);
+    --premium-line: rgba(255,255,255,.18);
+  }
+  html, body { background: var(--premium-black) !important; }
+  .reveal { color: var(--premium-white) !important; background: var(--premium-black) !important; }
+  .reveal .slides { text-align: left; }
+  .reveal .slides section.premium-slide {
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+    padding: 64px 82px 66px !important;
+    overflow: hidden;
+    border-radius: 0 !important;
+    color: var(--premium-white) !important;
+    background: #09090a !important;
+    text-shadow: none;
+  }
+  .reveal .slides section.premium-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: var(--hero-image);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(1) brightness(.72) contrast(1.08);
+    transform: scale(1.025);
+  }
+  .reveal .slides section.premium-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(5,5,6,.93) 0%, rgba(5,5,6,.83) 34%, rgba(5,5,6,.52) 72%, rgba(5,5,6,.30) 100%),
+      linear-gradient(0deg, rgba(5,5,6,.78) 0%, rgba(5,5,6,.08) 60%, rgba(5,5,6,.34) 100%);
+  }
+  .reveal .slides section.premium-slide > * { position: relative; z-index: 2; }
+  .reveal .slides section.premium-slide h1,
+  .reveal .slides section.premium-slide h2,
+  .reveal .slides section.premium-slide h3,
+  .reveal .slides section.premium-slide h4 {
+    color: #fff !important;
+    font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -.055em;
+    text-wrap: balance;
+  }
+  .reveal .slides section.premium-slide h1 { font-size: 3.9em; line-height: .94; }
+  .reveal .slides section.premium-slide h2 {
+    font-size: 2.08em;
+    line-height: 1.02;
+    max-width: 1120px;
+    margin-bottom: 28px;
+  }
+  .reveal .slides section.premium-slide h3 { font-size: 1.02em; line-height: 1.12; margin-bottom: 10px; }
+  .reveal .slides section.premium-slide p,
+  .reveal .slides section.premium-slide li {
+    color: rgba(255,255,255,.88) !important;
+    line-height: 1.38;
+  }
+  .reveal .slides section.premium-slide p { font-size: .74em; }
+  .reveal .slides section.premium-slide li { font-size: .71em; }
+  .reveal .slides section.premium-slide strong { color: #fff; }
+  .reveal .slides section.premium-slide a {
+    color: #fff !important;
+    text-decoration-color: rgba(255,255,255,.55);
+    text-underline-offset: 3px;
+  }
+  .reveal .slides section.premium-slide .eyebrow {
+    color: rgba(255,255,255,.7) !important;
+    font-size: .43em;
+    font-weight: 700;
+    letter-spacing: .2em;
+    margin-bottom: 22px;
+  }
+  .reveal .slides section.premium-slide .eyebrow:before {
+    width: 34px;
+    height: 2px;
+    background: #fff !important;
+    opacity: .8;
+  }
+  .reveal .slides section.premium-slide .lead {
+    color: #fff !important;
+    font-size: 1.12em !important;
+    font-weight: 500;
+    line-height: 1.15 !important;
+  }
+  .reveal .slides section.premium-slide .muted,
+  .reveal .slides section.premium-slide .photo-caption,
+  .reveal .slides section.premium-slide .tiny {
+    color: rgba(255,255,255,.66) !important;
+  }
+  .reveal .slides section.premium-slide .card,
+  .reveal .slides section.premium-slide .stat,
+  .reveal .slides section.premium-slide .diagram-row {
+    color: #fff !important;
+    background: rgba(8,8,9,.61) !important;
+    border: 1px solid rgba(255,255,255,.17) !important;
+    border-radius: 13px !important;
+    box-shadow: 0 18px 48px rgba(0,0,0,.19) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .reveal .slides section.premium-slide .card h3,
+  .reveal .slides section.premium-slide .card p,
+  .reveal .slides section.premium-slide .stat span,
+  .reveal .slides section.premium-slide .diagram-row span {
+    color: rgba(255,255,255,.82) !important;
+  }
+  .reveal .slides section.premium-slide .card .num,
+  .reveal .slides section.premium-slide .stat b,
+  .reveal .slides section.premium-slide .diagram-row b {
+    color: #fff !important;
+  }
+  .reveal .slides section.premium-slide .card .accent { color: #fff !important; }
+  .reveal .slides section.premium-slide .pill,
+  .reveal .slides section.premium-slide .badge {
+    color: #fff !important;
+    background: rgba(255,255,255,.10) !important;
+    border: 1px solid rgba(255,255,255,.25) !important;
+    border-radius: 99px !important;
+    backdrop-filter: blur(10px);
+  }
+  .reveal .slides section.premium-slide .quote {
+    color: #fff !important;
+    border-color: rgba(255,255,255,.86) !important;
+    text-shadow: 0 3px 22px rgba(0,0,0,.45);
+  }
+  .reveal .slides section.premium-slide .list-clean li:before { color: #fff !important; }
+  .reveal .slides section.premium-slide .timeline:before { background: rgba(255,255,255,.42) !important; }
+  .reveal .slides section.premium-slide .step:before {
+    background: #fff !important;
+    border-color: rgba(18,18,19,.9) !important;
+  }
+  .reveal .slides section.premium-slide .diagram-row span { color: rgba(255,255,255,.8) !important; }
+  .reveal .slides section.premium-slide .rule { background: rgba(255,255,255,.22) !important; }
+  .reveal .slides section.premium-slide .source,
+  .reveal .slides section.premium-slide .footer-mark {
+    color: rgba(255,255,255,.58) !important;
+    letter-spacing: .07em;
+  }
+  .reveal .slides section.premium-slide .references,
+  .reveal .slides section.premium-slide .credits {
+    color: rgba(255,255,255,.82) !important;
+  }
+  .reveal .slides section.premium-slide .references strong,
+  .reveal .slides section.premium-slide .credits strong { color: #fff !important; }
+  .reveal .slides section.premium-slide .photo { display: none !important; }
+  .reveal .slides section.premium-slide .image-frame { display: none !important; }
+  .reveal .slides section.premium-slide .cover {
+    background: transparent !important;
+  }
+  .reveal .slides section.premium-slide.cover {
+    padding-top: 84px !important;
+  }
+  .reveal .slides section.premium-slide.cover .kicker {
+    color: rgba(255,255,255,.72) !important;
+    font-size: .46em;
+    letter-spacing: .22em;
+  }
+  .reveal .slides section.premium-slide.cover .subtitle {
+    color: rgba(255,255,255,.84) !important;
+    max-width: 760px;
+  }
+  .reveal .slides section.premium-slide.cover .meta {
+    left: 82px;
+    right: 82px;
+    bottom: 48px;
+    grid-template-columns: 1.4fr 1fr 1.25fr;
+    gap: 28px;
+    border-top: 1px solid rgba(255,255,255,.28);
+  }
+  .reveal .slides section.premium-slide.cover .meta b {
+    color: rgba(255,255,255,.62) !important;
+    letter-spacing: .17em;
+  }
+  .reveal .slides section.premium-slide.cover .meta span {
+    color: rgba(255,255,255,.92) !important;
+  }
+  .reveal .slides section.premium-slide.cover .book-shot {
+    position: absolute !important;
+    right: 92px;
+    top: 150px;
+    width: 265px;
+    height: 345px;
+    object-fit: contain;
+    border-radius: 2px;
+    opacity: .93;
+    filter: drop-shadow(0 30px 45px rgba(0,0,0,.48));
+    transform: rotate(2deg);
+  }
+  .reveal .controls { color: #fff !important; }
+  .reveal .progress { color: #fff !important; height: 3px; }
+  .reveal .slide-number { color: rgba(255,255,255,.7) !important; }
+  @media (max-width: 900px) {
+    .reveal .slides section.premium-slide { padding: 42px 42px 56px !important; }
+    .reveal .slides section.premium-slide.cover .meta { left: 42px; right: 42px; grid-template-columns: 1fr 1fr; }
+    .reveal .slides section.premium-slide.cover .book-shot { opacity: .22; right: 28px; width: 220px; }
+    .reveal .slides section.premium-slide .layout-2,
+    .reveal .slides section.premium-slide .columns,
+    .reveal .slides section.premium-slide .refs-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal .slides section.premium-slide::before { transition: transform 1.2s ease, filter 1.2s ease; }
+    .reveal .slides section.premium-slide.present::before { transform: scale(1.055); }
+  }
+
   </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<section class="dark cover" data-background-transition="fade">
+<section class="dark cover premium-slide" data-background-transition="fade" style="--hero-image: url('https://static.wixstatic.com/media/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png/v1/fill/w_490%2Ch_465%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png')">
   <div class="kicker">LIBRAS · LEITURA E ANÁLISE</div>
   <h1>A<br>surdez</h1>
   <p class="subtitle">Entre o diagnóstico, a linguagem e a experiência de ser surdo</p>
@@ -146,7 +361,7 @@
   <aside class="notes">Abra com a pergunta que orienta o capítulo: a surdez é, por si só, um problema para a pessoa surda? Explique que a apresentação vai percorrer o argumento de Gesser e aproximá-lo da trajetória de Jonas, mantendo a distinção entre o contexto norte-americano do filme e a realidade brasileira da Libras.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://cdn.helloasso.com/img/photos/evenements/croppedimage-a13252486b3440fba53b5949036d9f3c.png')">
   <div class="eyebrow">PONTO DE PARTIDA · P. 63–64</div>
   <h2>A surdez é um problema para quem?</h2>
   <div class="layout-2">
@@ -172,7 +387,7 @@
   <aside class="notes">A autora apresenta duas grandes formas de conceber a surdez: patologicamente ou culturalmente. O livro assume uma postura crítica à medicalização como explicação exclusiva e à ideia de que a pessoa surda precisa tornar-se “normal” para pertencer à sociedade. Não se trata de negar a dimensão audiológica, mas de questionar sua transformação em destino social.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://d3v2l0729gt15o.cloudfront.net/Photos/Ent%C3%AAtes-des-pages/Formation-continue/RAC/_1200x650_crop_center-center_90_none/517965/D%C3%A9marche-RAC-DEC-Techniques-%C3%A0-l%C3%A9ducation-sp%C3%A9cialis%C3%A9e.webp')">
   <div class="eyebrow">DUAS FORMAS DE NARRAR</div>
   <h2>O que muda quando muda o olhar?</h2>
   <div class="layout-2 top" style="margin-top:28px">
@@ -201,7 +416,7 @@
   <aside class="notes">Faça a ressalva de que o livro não propõe ignorar a medicina ou a audiologia. O problema está em permitir que uma explicação clínica seja a única forma legítima de descrever a experiência surda, apagando as dimensões linguísticas, culturais e políticas.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://www.tlcdeaf.org/sites/default/files/styles/hero_banner_contained_small/public/images/MockTOD.jpg?h=10d202d3&amp;itok=uVmP0hhM')">
   <div class="eyebrow">CONCEITO-CHAVE · P. 64, 68–69</div>
   <h2>Ouvintismo: quando a diferença vira desvio</h2>
   <div class="columns">
@@ -223,7 +438,7 @@
   <aside class="notes">Defina ouvintismo com cuidado: não significa simplesmente que pessoas ouvintes existam ou que a oralização seja sempre inadequada. Refere-se ao conjunto de representações e relações de poder que toma a experiência ouvinte como padrão obrigatório e exige que o sujeito surdo se descreva a partir desse modelo.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://www.versobooks.com/cdn/shop/articles/mvsl.jpg?v=1677631579')">
   <div class="eyebrow">IDENTIDADE E PERTENCIMENTO · P. 65–67</div>
   <h2>Ser surdo não significa viver a surdez do mesmo modo</h2>
   <div class="layout-2" style="margin-top:18px">
@@ -249,7 +464,7 @@
   <aside class="notes">Use os relatos para mostrar que a identidade não é determinada apenas pelo grau audiométrico. A experiência é atravessada pela língua disponível na família, pelo contato com pares e pela possibilidade de construir pertencimento. No relato de Sam, filho de pais surdos, a criança inicialmente imagina que todo mundo é surdo; é a menina ouvinte que parece diferente.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://www.nacion.com/resizer/v2/VHKRYADHIVBNTIGQBV3JCTG3PM.JPG?auth=8113c29729cfb3990c59d19ebc059f5b6268bba7683a709f4188190ea66f32fc&amp;height=900&amp;smart=true&amp;width=1200')">
   <div class="eyebrow">SOCIEDADE E PRECONCEITO · P. 67–69</div>
   <h2>A sociedade também produz a deficiência</h2>
   <p class="lead" style="max-width:1050px">O “normal” não é neutro: é uma referência social construída e reforçada por instituições, discursos e práticas.</p>
@@ -270,7 +485,7 @@
   <aside class="notes">A autora compara a construção da normalidade em relação à surdez com outras hierarquias sociais. Evite simplificar como se bastasse “tolerar” ou “aceitar” a pessoa surda. O argumento é que as instituições precisam alterar suas práticas e reconhecer os sujeitos surdos como participantes políticos.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://deafservicesunlimited.com/app/uploads/2023/04/marthas-vineyard.jpeg')">
   <div class="eyebrow">UM CASO HISTÓRICO · P. 69–70</div>
   <h2>Martha’s Vineyard: quando a comunidade se ajusta</h2>
   <div class="layout-2">
@@ -292,7 +507,7 @@
   <aside class="notes">Martha’s Vineyard é apresentada no capítulo por meio do estudo de Nora Groce. A ilha é um exemplo histórico de como o contexto social pode permitir que a língua de sinais faça parte da vida cotidiana e que pessoas surdas participem da comunidade. Não apresente o caso como sociedade perfeita ou como modelo universal: use-o para demonstrar que a exclusão não é consequência inevitável da surdez.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://gallaudet.edu/images/History-Through-Deaf-Eyes/Language%20and%20Identity/2.08.01.jpg')">
   <div class="eyebrow">HISTÓRIA E PODER · P. 70–71</div>
   <h2>Da hereditariedade à eugenia</h2>
   <div class="layout-2">
@@ -313,7 +528,7 @@
   <aside class="notes">A autora recupera as campanhas eugênicas que defendiam impedir o contato entre pessoas surdas por medo de uma suposta “degeneração”. É importante tratar isso como história de violência e controle, não como uma divergência científica inocente. A biologia pode descrever causas da surdez, mas não determina direitos nem valor humano.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://www.hopkinsmedicine.org/-/media/ksw-images/istock_58527224_health_library.ashx?h=300&amp;hash=BCBB4427DA38C340F042A3DE00F4652B855FDA93&amp;la=en&amp;mh=300&amp;mw=500&amp;w=300')">
   <div class="eyebrow">DIMENSÃO AUDIOLÓGICA · P. 72–73</div>
   <h2>Tipos e graus ajudam a descrever. Não definem identidades.</h2>
   <div class="layout-2 top">
@@ -339,7 +554,7 @@
   <aside class="notes">Os números reproduzem a classificação citada por Gesser na edição consultada. Explique que a classificação audiológica é descritiva e não pode ser usada sozinha para inferir identidade, língua de preferência ou pertencimento à comunidade surda. O capítulo destaca que uma pessoa com surdez profunda pode não se identificar culturalmente como surda sinalizante, enquanto alguém com perda leve ou moderada pode ter forte identificação com a comunidade.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://www.salusuhealth.com/news/_files/images/hearing-aid.jpg')">
   <div class="eyebrow">TECNOLOGIA E EXPECTATIVAS · P. 73–76</div>
   <h2>Tecnologia não é sinônimo de linguagem</h2>
   <div class="layout-2">
@@ -363,7 +578,7 @@
   <aside class="notes">Gesser questiona a crença de que o aparelho auditivo restabelece a audição e permite automaticamente compreender uma língua oral. Sobre implantes, descreve a intervenção como invasiva e os resultados como dependentes de variáveis. Apresente com equilíbrio: tecnologia assistiva pode ter utilidade para algumas pessoas, mas não substitui o acesso linguístico nem deve ser imposta como condição para reconhecimento social.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://d3v2l0729gt15o.cloudfront.net/Photos/Ent%C3%AAtes-des-pages/Formation-continue/RAC/_1200x650_crop_center-center_90_none/517965/D%C3%A9marche-RAC-DEC-Techniques-%C3%A0-l%C3%A9ducation-sp%C3%A9cialis%C3%A9e.webp')">
   <div class="eyebrow">LINGUAGEM E DESENVOLVIMENTO · P. 76–78</div>
   <h2>O que sustenta o desenvolvimento?</h2>
   <div class="layout-2">
@@ -385,7 +600,7 @@
   <aside class="notes">Este é um dos argumentos mais importantes do capítulo. A autora relaciona desenvolvimento cognitivo, linguagem e interação social. A modalidade visual-gestual permite a aquisição de uma língua sem depender da audição. O problema não é a pessoa não ouvir; é passar períodos sem acesso a uma língua plenamente acessível para organizar experiências, comunicar-se e aprender.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://images.plex.tv/photo?size=large-1280&amp;url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F2c6c1b735d53a9770f765c64b4107766.jpg')">
   <div class="eyebrow">DIÁLOGO COM O CINEMA · 1979</div>
   <h2>Jonas: uma história sobre o que acontece quando falta língua</h2>
   <div class="layout-2">
@@ -407,7 +622,7 @@
   <aside class="notes">Explique a premissa sem repetir a terminologia ofensiva usada historicamente no filme. O American Film Institute confirma que os pais descobrem que o diagnóstico estava errado e que Jonas é surdo. O filme se passa em um contexto de forte valorização do oralismo. Não apresente essa história como retrato universal das pessoas surdas.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://static.wixstatic.com/media/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png/v1/fill/w_490%2Ch_465%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png')">
   <div class="eyebrow">TRÊS MOMENTOS DA NARRATIVA</div>
   <h2>O filme em diálogo com o capítulo</h2>
   <div class="timeline">
@@ -430,7 +645,7 @@
   <aside class="notes">Conecte cada momento ao capítulo: o diagnóstico reflete a leitura exclusivamente patológica; o oralismo dramatiza a expectativa de normalização; e o encontro com pessoas surdas exemplifica a importância de acesso à língua e à comunidade. A personagem mãe também atravessa um processo de aprendizagem: ela precisa conhecer o universo linguístico do filho.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://ajnoticias.com.br/images/noticias/53727/11c5e9976aebeafefffeb8fe6115a345.webp')">
   <div class="eyebrow">LEITURA CRÍTICA</div>
   <h2>O que o filme mostra — e o que precisamos relativizar</h2>
   <div class="layout-2">
@@ -454,7 +669,7 @@
   <aside class="notes">Esta é uma ressalva importante para uma apresentação de Libras no Brasil. O filme é estadunidense e os personagens usam ASL. Libras e ASL são línguas distintas. O valor do filme está em oferecer um caso histórico para discutir oralismo, acesso à linguagem e relações familiares; não em definir como todas as pessoas surdas vivem.</aside>
 </section>
 
-<section class="dark">
+<section class="dark premium-slide" style="--hero-image: url('https://www.nacion.com/resizer/v2/VHKRYADHIVBNTIGQBV3JCTG3PM.JPG?auth=8113c29729cfb3990c59d19ebc059f5b6268bba7683a709f4188190ea66f32fc&amp;height=900&amp;smart=true&amp;width=1200')">
   <div class="eyebrow">DO TEXTO À POLÍTICA EDUCACIONAL</div>
   <h2>Reconhecimento legal é necessário. Não basta sozinho.</h2>
   <div class="layout-2 top">
@@ -479,7 +694,7 @@
   <aside class="notes">Diferencie o momento do livro do marco legal posterior. Em 2009, Gesser discute a oficialização da Libras e o Decreto 5.626/2005, insistindo que o reconhecimento legal não elimina preconceitos nem garante, por si, mudanças na escola. Como atualização, a Lei 14.191/2021 inseriu na LDB um capítulo sobre educação bilíngue de surdos, definindo Libras como primeira língua e português escrito como segunda língua para os estudantes que optam por essa modalidade.</aside>
 </section>
 
-<section class="dark ending">
+<section class="dark ending premium-slide" style="--hero-image: url('https://ajnoticias.com.br/images/noticias/53727/11c5e9976aebeafefffeb8fe6115a345.webp')">
   <div class="eyebrow">SÍNTESE</div>
   <h2>Três ideias para levar adiante</h2>
   <div class="layout-3" style="margin-top:28px">
@@ -493,7 +708,7 @@
   <aside class="notes">Finalize retomando a pergunta da abertura. Não reduza a discussão à escolha entre aparelho, implante ou língua de sinais. O capítulo propõe olhar para linguagem, identidade, história, direitos e relações sociais. Convide a turma a pensar quais práticas concretas da escola ampliam ou limitam a participação de estudantes surdos.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://cdn.helloasso.com/img/photos/evenements/croppedimage-a13252486b3440fba53b5949036d9f3c.png')">
   <div class="eyebrow">REFERÊNCIAS</div>
   <h2>Bibliografia</h2>
   <div class="refs-grid">
@@ -514,7 +729,7 @@
   <aside class="notes">A referência principal é o capítulo 3 do livro enviado para a atividade. As referências complementares apoiam a contextualização do filme e a atualização da legislação. A análise fílmica não substitui a leitura do capítulo; foi usada como contraponto para tornar os conceitos mais concretos.</aside>
 </section>
 
-<section>
+<section class="premium-slide" style="--hero-image: url('https://static.wixstatic.com/media/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png/v1/fill/w_490%2Ch_465%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/1dff7e_a642657a272c41c1aba52a7ad4ad0787~mv2.png')">
   <div class="eyebrow">FONTES VISUAIS E DE CONSULTA</div>
   <h2>Créditos e leituras complementares</h2>
   <p class="credits"><strong>Capa do livro:</strong> Parábola Editorial — <a href="https://www.parabolaeditorial.com.br/libras" target="_blank">página da obra</a>.</p>
@@ -522,6 +737,10 @@
   <p class="credits"><strong>Fotografia histórica sobre Martha’s Vineyard:</strong> Verso Books — <a href="https://www.versobooks.com/blogs/news/3519-nationalism-and-deafness" target="_blank">Nationalism and Deafness</a>; Deaf Services Unlimited — <a href="https://deafservicesunlimited.com/lesson/deaf-history-in-america/" target="_blank">Deaf History in America</a>.</p>
   <p class="credits"><strong>Imagens de prática e ensino de sinais:</strong> The Learning Center for the Deaf — <a href="https://www.tlcdeaf.org/services/public-school-partnerships" target="_blank">Public School Partnerships</a>; Universidad de Chile — <a href="https://www.uchile.cl/noticias/179954/hoy-en-tantaku-dia-internacional-de-las-lenguas-de-senas" target="_blank">Diversidade e identidade linguística</a>.</p>
   <p class="credits"><strong>Fontes de consulta:</strong> Audrei Gesser — <a href="https://audreigesser.paginas.ufsc.br/livros-e-materiais-didaticos/" target="_blank">bibliografia da autora</a>; Revista UFG — <a href="https://revistas.ufg.br/revistaufg/article/view/66285" target="_blank">artigo sobre o filme</a>; Planalto — <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14191.htm" target="_blank">Lei nº 14.191/2021</a>.</p>
+
+  <p class="credits"><strong>Fotografias de língua de sinais e identidade:</strong> Arnaud Balard — <a href="https://www.arnaudbalard.com/en" target="_blank" rel="noopener">retrato em língua de sinais</a>; Fabrik du Signe / HelloAsso — <a href="https://www.helloasso.com/associations/fabrik-du-signe" target="_blank" rel="noopener">gestos das mãos</a>; Cégep Marie-Victorin — <a href="https://cegepmv.ca/formation-continue/reconnaissance-des-acquis-et-des-competences/techniques-education-specialisee" target="_blank" rel="noopener">ensino de sinais</a>.</p>
+  <p class="credits"><strong>Comunidade e contexto familiar:</strong> La Nación — <a href="https://www.nacion.com/revista-dominical/madres-o-hijos-sordos-cuando-el-amor-rompe-la/AONCA7K6QNFP3EACQFTJARUFFE/story/" target="_blank" rel="noopener">comunicação em família</a>; AJ Notícias — <a href="https://ajnoticias.com.br/noticia/53727/festa-da-identidade-surda-tera-programacao-cultural-e-atividades-para-a-comunidade-em-blumenau-saiba-quando" target="_blank" rel="noopener">Festa da Identidade Surda</a>.</p>
+  <p class="credits"><strong>História e recursos tecnológicos:</strong> Gallaudet University — <a href="https://gallaudet.edu/museum/exhibits/history-through-deaf-eyes/language-and-identity/oral-training-in-signing-schools/" target="_blank" rel="noopener">arquivo histórico escolar</a>; Johns Hopkins Medicine — <a href="https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/cochlear-implant-surgery" target="_blank" rel="noopener">implante coclear</a>; Salus University — <a href="https://www.salusuhealth.com/news/2020/04/deaf-history-month-fun-facts.html" target="_blank" rel="noopener">aparelho auditivo</a>.</p>
   <div class="rule"></div>
   <p class="tiny muted">A imagem do filme é material promocional. As demais imagens permanecem vinculadas às páginas de origem; os créditos foram mantidos para identificação das fontes.</p>
   <div class="source">Acesso às páginas: 23 nov. 2026.</div>
