@@ -1389,6 +1389,101 @@
     .reveal .slides section.slide-17 .refs-grid { gap: 24px; }
   }
 
+  
+  /* Imagens editoriais como painéis próprios: texto deixa de competir
+     com a mesma fotografia repetida no fundo da tela. */
+  .reveal .slides section.slide-04::before,
+  .reveal .slides section.slide-05::before,
+  .reveal .slides section.slide-07::before,
+  .reveal .slides section.slide-08::before,
+  .reveal .slides section.slide-11::before,
+  .reveal .slides section.slide-12::before,
+  .reveal .slides section.slide-14::before {
+    background-image: none !important;
+    opacity: 0 !important;
+  }
+  .reveal .slides section.slide-04::after,
+  .reveal .slides section.slide-05::after,
+  .reveal .slides section.slide-07::after,
+  .reveal .slides section.slide-08::after,
+  .reveal .slides section.slide-11::after,
+  .reveal .slides section.slide-12::after,
+  .reveal .slides section.slide-14::after {
+    background: linear-gradient(135deg, rgba(255,255,255,.025), transparent 55%, rgba(0,0,0,.12)) !important;
+  }
+
+  .reveal .slides section.slide-04 .image-frame,
+  .reveal .slides section.slide-08 .image-frame {
+    display: flex !important;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px !important;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 20px;
+    background: rgba(255,255,255,.045) !important;
+    box-shadow: 0 22px 55px rgba(0,0,0,.24);
+  }
+
+  .reveal .slides section.slide-04 .photo,
+  .reveal .slides section.slide-08 .photo,
+  .reveal .slides section.slide-05 .photo,
+  .reveal .slides section.slide-07 .photo,
+  .reveal .slides section.slide-11 .photo,
+  .reveal .slides section.slide-12 .photo,
+  .reveal .slides section.slide-14 .photo {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 48px rgba(0,0,0,.3);
+  }
+
+  .reveal .slides section.slide-04 .image-frame .photo,
+  .reveal .slides section.slide-08 .image-frame .photo {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: min(48vh, 500px) !important;
+    object-fit: cover;
+  }
+
+  .reveal .slides section.slide-05 .layout-2 > div:nth-child(2),
+  .reveal .slides section.slide-07 .layout-2 > div:nth-child(2),
+  .reveal .slides section.slide-11 .layout-2 > div:nth-child(2),
+  .reveal .slides section.slide-12 .layout-2 > div:nth-child(2),
+  .reveal .slides section.slide-14 .layout-2 > div:nth-child(2) {
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 20px;
+    background: rgba(255,255,255,.035);
+  }
+
+  .reveal .slides section.slide-05 .photo {
+    height: min(43vh, 420px) !important;
+    object-fit: cover;
+  }
+  .reveal .slides section.slide-07 .photo {
+    height: min(51vh, 520px) !important;
+    object-fit: cover;
+  }
+  .reveal .slides section.slide-11 .photo {
+    height: min(49vh, 500px) !important;
+    object-fit: cover;
+  }
+  .reveal .slides section.slide-12 .photo {
+    height: min(49vh, 500px) !important;
+    object-fit: contain;
+    background: rgba(0,0,0,.24);
+  }
+  .reveal .slides section.slide-14 .photo {
+    height: min(39vh, 390px) !important;
+    object-fit: cover;
+  }
+
   </style>
 </head>
 <body>
