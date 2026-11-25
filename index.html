@@ -781,6 +781,19 @@
     line-height: 1.38;
   }
 
+  
+  /* Capa simplificada: título em uma linha e sem imagem do livro */
+  .reveal .slides section.premium-slide.cover > .cover-main {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .reveal .slides section.premium-slide.cover .cover-copy {
+    max-width: 100%;
+  }
+  .reveal .slides section.premium-slide.cover h1 {
+    max-width: none !important;
+    white-space: nowrap;
+  }
+
   </style>
 </head>
 <body>
@@ -792,13 +805,11 @@
     <div class="cover-copy">
       <img class="ifg-logo" src="./assets/ifg-logo-monochrome.svg" alt="Instituto Federal de Goiás" />
       <div class="kicker">LIBRAS · LEITURA E ANÁLISE</div>
-      <h1>A<br>surdez</h1>
+      <h1>A surdez</h1>
       <p class="subtitle">Entre o diagnóstico, a linguagem e a experiência de ser surdo</p>
       <p class="cover-description">Capítulo 3 de <em>LIBRAS? Que língua é essa?</em>, de Audrei Gesser, em diálogo com o filme <em>E seu nome é Jonas</em> (1979).</p>
     </div>
-    <div class="cover-art">
-      <img class="book-shot" src="https://www.parabolaeditorial.com.br/lojas/00034487/prod/215.jpg?cccfc=22b25232" alt="Capa do livro LIBRAS? Que língua é essa?, de Audrei Gesser">
-    </div>
+
   </div>
   <div class="meta">
     <div><b>Instituição</b><span>Instituto Federal de Educação, Ciência e Tecnologia de Goiás</span></div>
