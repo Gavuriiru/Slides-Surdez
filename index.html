@@ -2916,24 +2916,7 @@
     max-width: min(68%, 980px) !important;
   }
 
-  /* SLIDE 12 — cronologia também começa pelo eixo esquerdo;
-     não fica como bloco estreito centralizado na tela. */
-  .reveal .slides section.slide-13 > .timeline {
-    align-self: flex-start !important;
-    justify-self: start;
-    width: min(100%, 1320px) !important;
-    max-width: 100%;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
-  .reveal .slides section.slide-13 > .lead {
-    align-self: flex-start !important;
-    width: min(100%, 1320px);
-    max-width: 100%;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    text-align: left !important;
-  }
+  /* SLIDE 12 — restaura a largura e a composição anterior da linha do tempo. */
 
   @media (max-width: 900px) {
     .reveal .slides section.slide-05 > .story-grid {
@@ -3157,6 +3140,144 @@
       width: 100% !important;
       max-width: 100% !important;
     }
+    .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
+  
+  /* =========================================================
+     NUMERAÇÃO CORRETA DO USUÁRIO (CAPA = 0)
+     Slides 10 e 11 -> .slide-11 e .slide-12.
+     Slide 12 (.slide-13) volta à composição anterior.
+     ========================================================= */
+
+  /* SLIDE 10 — bloco de leitura à esquerda; todos os elementos
+     textuais e a identificação teórica seguem o mesmo eixo. */
+  .reveal .slides section.slide-11 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .reveal .slides section.slide-11 > .reading-block {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(20px, 2.7vh, 32px);
+    width: min(68%, 980px) !important;
+    max-width: min(68%, 980px) !important;
+    min-height: 0;
+    margin: 0 auto 0 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-11 > .reading-block .lead {
+    max-width: 900px;
+    margin: 0 !important;
+    font-size: 1.40em !important;
+    line-height: 1.24 !important;
+  }
+  .reveal .slides section.slide-11 > .reading-block .list-clean {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2.2vh, 24px);
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-11 > .reading-block .list-clean li {
+    margin: 0 !important;
+    font-size: 1.02em !important;
+    line-height: 1.42 !important;
+  }
+  .reveal .slides section.slide-11 > .reading-block .pill {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    font-size: .66em !important;
+    letter-spacing: .11em;
+    color: rgba(255,255,255,.72) !important;
+  }
+
+  /* SLIDE 11 — bloco sobre Jonas à esquerda; a imagem do filme
+     permanece apenas como fundo fotográfico da tela. */
+  .reveal .slides section.slide-12 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .reveal .slides section.slide-12 > .layout-2 {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100%;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex: 0 1 68%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(18px, 2.3vh, 28px);
+    width: min(68%, 980px) !important;
+    max-width: min(68%, 980px) !important;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 auto 0 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-12 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-12 .lead,
+  .reveal .slides section.slide-12 .small {
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-12 .list-clean {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2vh, 22px);
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-12 .list-clean li {
+    margin: 0 !important;
+  }
+
+  /* O slide 12 (HTML .slide-13) volta à largura e ao alinhamento
+     originais da composição que o usuário preferia. */
+  .reveal .slides section.slide-13 > .timeline {
+    align-self: stretch !important;
+    justify-self: stretch;
+    width: auto !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .reveal .slides section.slide-13 > .lead {
+    align-self: stretch !important;
+    width: auto !important;
+    max-width: 1320px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  @media (max-width: 900px) {
+    .reveal .slides section.slide-11 > .reading-block,
     .reveal .slides section.slide-12 > .layout-2 > div:first-child {
       width: 100% !important;
       max-width: 100% !important;
@@ -3404,22 +3525,15 @@
 <section class="dark premium-slide roomy-text slide-11" style="--hero-image: url('https://d3v2l0729gt15o.cloudfront.net/Photos/Ent%C3%AAtes-des-pages/Formation-continue/RAC/_1200x650_crop_center-center_90_none/517965/D%C3%A9marche-RAC-DEC-Techniques-%C3%A0-l%C3%A9ducation-sp%C3%A9cialis%C3%A9e.webp')">
   <div class="eyebrow">LINGUAGEM E DESENVOLVIMENTO · P. 76–78</div>
   <h2>O que sustenta o desenvolvimento?</h2>
-  <div class="layout-2">
-    <div>
-      <p class="lead">Não é a surdez que compromete o desenvolvimento cognitivo-linguístico: é a falta de acesso a uma língua.</p>
-      <ul class="list-clean" style="margin-top:24px !important">
-        <li>A língua organiza a experiência, as relações e a construção da identidade.</li>
-        <li>Línguas de sinais são línguas de modalidade visual-gestual.</li>
-        <li>A aquisição da língua de sinais percorre etapas comparáveis às da aquisição de línguas orais.</li>
-      </ul>
-    </div>
-    <div>
-      <img class="photo" style="height:385px" src="https://www.tlcdeaf.org/sites/default/files/styles/hero_banner_contained_small/public/images/MockTOD.jpg?h=10d202d3&itok=uVmP0hhM" alt="Professor e estudante em atividade de aprendizagem por sinais">
-      <p class="photo-caption">A interação em língua de sinais é uma experiência linguística completa, não um recurso gestual improvisado. Fonte: The Learning Center for the Deaf.</p>
-      <div class="pill" style="margin-top:15px">Vygotsky · Chomsky · Quadros</div>
-    </div>
+  <div class="reading-block">
+    <p class="lead">Não é a surdez que compromete o desenvolvimento cognitivo-linguístico: é a falta de acesso a uma língua.</p>
+    <ul class="list-clean">
+      <li>A língua organiza a experiência, as relações e a construção da identidade.</li>
+      <li>Línguas de sinais são línguas de modalidade visual-gestual.</li>
+      <li>A aquisição da língua de sinais percorre etapas comparáveis às da aquisição de línguas orais.</li>
+    </ul>
+    <div class="pill">Vygotsky · Chomsky · Quadros</div>
   </div>
-  
   <aside class="notes">Este é um dos argumentos mais importantes do capítulo. A autora relaciona desenvolvimento cognitivo, linguagem e interação social. A modalidade visual-gestual permite a aquisição de uma língua sem depender da audição. O problema não é a pessoa não ouvir; é passar períodos sem acesso a uma língua plenamente acessível para organizar experiências, comunicar-se e aprender.</aside>
 </section>
 
@@ -3427,21 +3541,16 @@
   <div class="eyebrow">DIÁLOGO COM O CINEMA · 1979</div>
   <h2>Jonas: uma história sobre o que acontece quando falta língua</h2>
   <div class="layout-2">
-    <div>
+    <div class="reading-block">
       <p class="lead"><em>E seu nome é Jonas</em> acompanha um menino surdo cuja dificuldade de comunicação é confundida com deficiência intelectual.</p>
-      <ul class="list-clean" style="margin-top:22px !important">
+      <ul class="list-clean">
         <li>Jonas é institucionalizado após um diagnóstico equivocado.</li>
         <li>Ao sair, encontra um ambiente escolar marcado pelo oralismo.</li>
         <li>O contato com pessoas surdas e com a língua de sinais abre outra possibilidade de comunicação.</li>
       </ul>
-      <p class="small muted" style="margin-top:18px">Direção: Richard Michaels · Estados Unidos · 1979 · 100 min.</p>
-    </div>
-    <div>
-      <img class="photo" style="height:400px" src="https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F2c6c1b735d53a9770f765c64b4107766.jpg" alt="Imagem promocional do filme And Your Name Is Jonah, de 1979">
-      <p class="photo-caption">Imagem promocional de <em>And Your Name Is Jonah</em>. Fonte: Plex / Gracenote.</p>
+      <p class="small muted">Direção: Richard Michaels · Estados Unidos · 1979 · 100 min.</p>
     </div>
   </div>
-  
   <aside class="notes">Explique a premissa sem repetir a terminologia ofensiva usada historicamente no filme. O American Film Institute confirma que os pais descobrem que o diagnóstico estava errado e que Jonas é surdo. O filme se passa em um contexto de forte valorização do oralismo. Não apresente essa história como retrato universal das pessoas surdas.</aside>
 </section>
 
