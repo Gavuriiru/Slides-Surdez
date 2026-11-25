@@ -2950,6 +2950,219 @@
     }
   }
 
+  
+  /* =========================================================
+     REFINO COM NUMERAÇÃO ZERO-BASED — SLIDES 4, 7, 11 E 12
+     A capa é slide 0. Portanto:
+       usuário 4  -> .slide-05
+       usuário 7  -> .slide-08
+       usuário 8  -> .slide-09 (referência preservada)
+       usuário 11 -> .slide-12
+       usuário 12 -> .slide-13
+       usuário 14 -> .slide-15 (referência preservada)
+     ========================================================= */
+
+  /* SLIDE 4 — os três relatos formam uma única composição.
+     Sem divisória solta, sem painel lateral e sem cartões.
+     As três colunas compartilham larguras e eixo superior;
+     a grade inteira fica centrada no espaço útil do slide. */
+  .reveal .slides section.slide-05 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .reveal .slides section.slide-05 > .story-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start !important;
+    align-content: center !important;
+    justify-content: stretch;
+    gap: clamp(32px, 4vw, 62px);
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-05 .story,
+  .reveal .slides section.slide-05 .story-sam {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-05 .story-kicker {
+    min-height: 2.4em;
+    margin: 0 0 16px !important;
+    color: rgba(255,255,255,.7) !important;
+    font-size: .60em !important;
+    line-height: 1.28 !important;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+  .reveal .slides section.slide-05 .story h3 {
+    min-height: 2.25em;
+    max-width: 100%;
+    margin: 0 0 14px !important;
+    font-size: 1.22em !important;
+    line-height: 1.16 !important;
+  }
+  .reveal .slides section.slide-05 .story p {
+    max-width: 100%;
+    margin: 0 !important;
+    font-size: .98em !important;
+    line-height: 1.45 !important;
+  }
+
+  /* SLIDE 7 — usa o mesmo princípio de centro vertical dos slides
+     8 e 14: corpo flexível, coluna única e blocos com ritmo regular.
+     O texto continua ancorado à margem esquerda. */
+  .reveal .slides section.slide-08 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .reveal .slides section.slide-08 > .layout-2 {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: row;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100%;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex: 0 1 66%;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: flex-start;
+    gap: clamp(22px, 3vh, 34px);
+    width: 66% !important;
+    max-width: 980px !important;
+    min-width: 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:first-child > p:first-child {
+    max-width: 900px;
+    margin: 0 !important;
+    font-size: 1.02em !important;
+    line-height: 1.46 !important;
+  }
+  .reveal .slides section.slide-08 .card {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-08 .card h3 {
+    margin: 0 0 12px !important;
+    font-size: 1.28em !important;
+  }
+  .reveal .slides section.slide-08 .card p {
+    margin: 0 !important;
+    font-size: 1em !important;
+    line-height: 1.45 !important;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:first-child > p.muted {
+    max-width: 900px;
+    margin: 0 !important;
+    font-size: 1em !important;
+    line-height: 1.44 !important;
+  }
+
+  /* SLIDE 11 — texto à esquerda, sem centralização horizontal. */
+  .reveal .slides section.slide-12 > .layout-2 {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: min(68%, 980px) !important;
+    max-width: min(68%, 980px) !important;
+  }
+
+  /* SLIDE 12 — cronologia e frase final continuam no eixo esquerdo. */
+  .reveal .slides section.slide-13 > .timeline {
+    align-self: flex-start !important;
+    justify-self: start;
+    width: min(100%, 1320px) !important;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  .reveal .slides section.slide-13 > .lead {
+    align-self: flex-start !important;
+    width: min(100%, 1320px);
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  /* Slides 8 e 14 — conservar os exemplos de equilíbrio vertical.
+     Não permitir que as regras genéricas de altura os desloquem. */
+  .reveal .slides section.slide-09 > .layout-2,
+  .reveal .slides section.slide-15 > .layout-2 {
+    align-items: center !important;
+    justify-content: stretch;
+  }
+  .reveal .slides section.slide-09 > .layout-2 > div,
+  .reveal .slides section.slide-15 > .layout-2 > div {
+    align-self: center;
+  }
+
+  @media (max-width: 900px) {
+    .reveal .slides section.slide-05 > .story-grid {
+      grid-template-columns: 1fr;
+      align-content: start !important;
+      gap: 26px;
+    }
+    .reveal .slides section.slide-05 .story-kicker,
+    .reveal .slides section.slide-05 .story h3 {
+      min-height: 0;
+    }
+    .reveal .slides section.slide-08 > .layout-2 > div:first-child {
+      flex-basis: 100%;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
   </style>
 </head>
 <body>
