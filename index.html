@@ -836,7 +836,7 @@
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    padding: clamp(54px, 7vh, 82px) clamp(62px, 7vw, 112px) clamp(42px, 5vh, 64px) !important;
+    padding: clamp(66px, 8vh, 96px) clamp(70px, 7.5vw, 124px) clamp(48px, 6vh, 72px) !important;
   }
   .reveal .slides section.slide-01 > .cover-main {
     display: grid;
@@ -846,44 +846,45 @@
     min-height: 0;
   }
   .reveal .slides section.slide-01 .cover-copy {
-    max-width: min(1120px, 78vw) !important;
+    max-width: min(1080px, 76vw) !important;
   }
   .reveal .slides section.slide-01 .ifg-logo {
-    width: clamp(190px, 16vw, 270px);
-    max-height: 76px;
+    width: clamp(210px, 17vw, 286px);
+    max-height: 84px;
     object-fit: contain;
     object-position: left center;
-    margin-bottom: clamp(22px, 3vh, 36px);
+    margin-bottom: clamp(34px, 4.5vh, 54px);
   }
   .reveal .slides section.slide-01 .kicker {
-    font-size: .58em;
-    margin-bottom: clamp(18px, 2.5vh, 28px);
+    font-size: .60em;
+    margin-bottom: clamp(28px, 3.8vh, 42px);
   }
   .reveal .slides section.slide-01 h1 {
-    font-size: clamp(5em, 7.2vw, 7.2em) !important;
-    line-height: .9;
-    margin-bottom: 24px;
+    font-size: clamp(5.2em, 7.5vw, 7.8em) !important;
+    line-height: .92;
+    margin-bottom: clamp(28px, 3.8vh, 44px);
   }
   .reveal .slides section.slide-01 .subtitle {
     max-width: 980px;
-    font-size: 1.38em;
-    line-height: 1.22;
-    margin-bottom: 18px;
+    font-size: 1.42em;
+    line-height: 1.24;
+    margin-top: 0;
+    margin-bottom: clamp(26px, 3.5vh, 40px);
   }
   .reveal .slides section.slide-01 .cover-description {
-    max-width: 940px;
+    max-width: 880px;
     font-size: .91em !important;
-    line-height: 1.42;
+    line-height: 1.5;
   }
   .reveal .slides section.slide-01 .meta {
     position: relative !important;
     inset: auto !important;
     width: 100%;
     display: grid;
-    grid-template-columns: 1.45fr .9fr 1.2fr;
-    gap: clamp(22px, 3vw, 48px);
-    margin: clamp(24px, 4vh, 42px) 0 0;
-    padding-top: 20px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(64px, 9vw, 144px);
+    margin: clamp(46px, 6.8vh, 78px) 0 0;
+    padding-top: 24px;
   }
   .reveal .slides section.slide-01 .meta b {
     font-size: .62em !important;
@@ -1545,24 +1546,24 @@
   .reveal .slides section.slide-02 .comparison-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(42px, 6vw, 92px);
-    margin-top: clamp(44px, 6vh, 68px);
+    gap: clamp(58px, 7vw, 112px);
+    margin-top: clamp(56px, 7vh, 82px);
   }
   .reveal .slides section.slide-02 .comparison-item {
     min-width: 0;
-    padding-top: 24px;
+    padding-top: 30px;
     border-top: 2px solid rgba(255,255,255,.58);
   }
   .reveal .slides section.slide-02 .comparison-item .num {
     font-size: .67em;
     color: rgba(255,255,255,.68);
     letter-spacing: .15em;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
   .reveal .slides section.slide-02 .comparison-item h3 {
     font-size: 1.58em;
     line-height: 1.12;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
   .reveal .slides section.slide-02 .comparison-item p {
     max-width: 650px;
@@ -1574,16 +1575,16 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: clamp(26px, 4vw, 60px);
-    margin-top: clamp(44px, 6vh, 68px);
-    padding-top: 26px;
+    gap: clamp(38px, 5vw, 76px);
+    margin-top: clamp(58px, 7.2vh, 86px);
+    padding-top: 34px;
     border-top: 1px solid rgba(255,255,255,.28);
   }
   .reveal .slides section.slide-02 .thesis-main { max-width: 1260px; }
   .reveal .slides section.slide-02 .thesis .lead {
     font-size: 1.28em !important;
     line-height: 1.24 !important;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
   .reveal .slides section.slide-02 .thesis .muted {
     font-size: .92em;
@@ -1919,8 +1920,8 @@
 
   /* Mantém o layout confortável também em janelas menores. */
   @media (max-height: 760px) {
-    .reveal .slides section.slide-02 .comparison-grid { margin-top: 28px; gap: 36px; }
-    .reveal .slides section.slide-02 .thesis { margin-top: 28px; }
+    .reveal .slides section.slide-02 .comparison-grid { margin-top: 38px; gap: 42px; }
+    .reveal .slides section.slide-02 .thesis { margin-top: 38px; }
     .reveal .slides section.slide-04 .columns > div:first-child { max-width: 64%; }
     .reveal .slides section.slide-06 .layout-3 { height: 31vh; }
     .reveal .slides section.slide-13 .timeline { margin-top: 34px; }
@@ -2196,8 +2197,8 @@
   .reveal .slides section.slide-17 .refs-grid {
     height: auto !important;
     min-height: 0;
-    margin-top: clamp(38px, 4.5vh, 54px) !important;
-    gap: clamp(54px, 6vw, 92px);
+    margin-top: clamp(28px, 3.2vh, 40px) !important;
+    gap: clamp(34px, 4vw, 62px);
     align-items: start;
   }
   .reveal .slides section.slide-17 .refs-grid > div,
@@ -2205,7 +2206,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: clamp(28px, 3.5vh, 42px);
+    gap: clamp(14px, 1.7vh, 20px);
     min-width: 0;
     padding: 0 !important;
     border: 0 !important;
@@ -2215,19 +2216,19 @@
     margin: 0 !important;
     padding: 0 !important;
     border: 0 !important;
-    font-size: .78em !important;
-    line-height: 1.46 !important;
+    font-size: .60em !important;
+    line-height: 1.36 !important;
     overflow-wrap: break-word;
   }
   .reveal .slides section.slide-17 > .rule {
     display: none !important;
   }
   .reveal .slides section.slide-17 > .small {
-    margin-top: clamp(36px, 5vh, 60px) !important;
-    padding-top: 16px;
+    margin-top: 12px !important;
+    padding-top: 10px;
     border-top: 1px solid rgba(255,255,255,.2);
-    font-size: .72em !important;
-    line-height: 1.4;
+    font-size: .56em !important;
+    line-height: 1.35;
   }
 
   /* Reduz apenas a ornamentação residual nos slides revistos. */
@@ -2786,8 +2787,8 @@
   .reveal .slides section.slide-17 > .refs-grid > div {
     display: flex !important;
     flex-direction: column;
-    justify-content: space-evenly !important;
-    gap: clamp(18px, 2.5vh, 30px);
+    justify-content: flex-start !important;
+    gap: clamp(14px, 1.6vh, 19px);
     min-height: 0;
     height: 100%;
   }
@@ -3206,55 +3207,51 @@
     color: rgba(255,255,255,.72) !important;
   }
 
-  /* SLIDE 11 — bloco sobre Jonas à esquerda; a imagem do filme
-     permanece apenas como fundo fotográfico da tela. */
+  /* SLIDE 11 — bloco de leitura aberto, alinhado ao eixo dos slides 6, 7 e 10. */
   .reveal .slides section.slide-12 {
     display: flex !important;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
   }
-  .reveal .slides section.slide-12 > .layout-2 {
+  .reveal .slides section.slide-12 > .reading-block {
     display: flex !important;
     flex: 1 1 0;
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    width: 100%;
-    min-height: 0;
-    height: auto !important;
-    margin: 0 !important;
-  }
-  .reveal .slides section.slide-12 > .layout-2 > div:first-child {
-    display: flex !important;
-    flex: 0 1 68%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: clamp(18px, 2.3vh, 28px);
+    gap: clamp(20px, 2.7vh, 32px);
     width: min(68%, 980px) !important;
     max-width: min(68%, 980px) !important;
     min-height: 0;
-    height: auto !important;
     margin: 0 auto 0 0 !important;
     padding: 0 !important;
   }
-  .reveal .slides section.slide-12 > .layout-2 > div:nth-child(2) {
-    display: none !important;
-  }
-  .reveal .slides section.slide-12 .lead,
-  .reveal .slides section.slide-12 .small {
+  .reveal .slides section.slide-12 > .reading-block .lead {
+    max-width: 900px;
     margin: 0 !important;
+    font-size: 1.34em !important;
+    line-height: 1.26 !important;
   }
-  .reveal .slides section.slide-12 .list-clean {
+  .reveal .slides section.slide-12 > .reading-block .list-clean {
     display: flex;
     flex-direction: column;
-    gap: clamp(15px, 2vh, 22px);
+    gap: clamp(16px, 2.2vh, 24px);
+    width: 100%;
     margin: 0 !important;
     padding: 0 !important;
   }
-  .reveal .slides section.slide-12 .list-clean li {
+  .reveal .slides section.slide-12 > .reading-block .list-clean li {
     margin: 0 !important;
+    font-size: 1.02em !important;
+    line-height: 1.42 !important;
+  }
+  .reveal .slides section.slide-12 > .reading-block .small {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 900px;
+    font-size: .90em !important;
+    line-height: 1.45 !important;
   }
 
   /* O slide 12 (HTML .slide-13) volta à largura e ao alinhamento
@@ -3302,7 +3299,6 @@
 
   </div>
   <div class="meta">
-    <div><b>Instituição</b><span>Instituto Federal de Educação, Ciência e Tecnologia de Goiás</span></div>
     <div><b>Componente</b><span>Libras<br>Docente: Newton Rocha</span></div>
     <div><b>Discentes</b><span>José Gabriel · Jean Carlos<br>Sávio Miguel · Arthur</span></div>
   </div>
@@ -3540,16 +3536,14 @@
 <section class="premium-slide balanced-text slide-12" style="--hero-image: url('https://images.plex.tv/photo?size=large-1280&amp;url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F2c6c1b735d53a9770f765c64b4107766.jpg')">
   <div class="eyebrow">DIÁLOGO COM O CINEMA · 1979</div>
   <h2>Jonas: uma história sobre o que acontece quando falta língua</h2>
-  <div class="layout-2">
-    <div class="reading-block">
-      <p class="lead"><em>E seu nome é Jonas</em> acompanha um menino surdo cuja dificuldade de comunicação é confundida com deficiência intelectual.</p>
-      <ul class="list-clean">
-        <li>Jonas é institucionalizado após um diagnóstico equivocado.</li>
-        <li>Ao sair, encontra um ambiente escolar marcado pelo oralismo.</li>
-        <li>O contato com pessoas surdas e com a língua de sinais abre outra possibilidade de comunicação.</li>
-      </ul>
-      <p class="small muted">Direção: Richard Michaels · Estados Unidos · 1979 · 100 min.</p>
-    </div>
+  <div class="reading-block">
+    <p class="lead"><em>E seu nome é Jonas</em> acompanha um menino surdo cuja dificuldade de comunicação é confundida com deficiência intelectual.</p>
+    <ul class="list-clean">
+      <li>Jonas é institucionalizado após um diagnóstico equivocado.</li>
+      <li>Ao sair, encontra um ambiente escolar marcado pelo oralismo.</li>
+      <li>O contato com pessoas surdas e com a língua de sinais abre outra possibilidade de comunicação.</li>
+    </ul>
+    <p class="small muted">Direção: Richard Michaels · Estados Unidos · 1979 · 100 min.</p>
   </div>
   <aside class="notes">Explique a premissa sem repetir a terminologia ofensiva usada historicamente no filme. O American Film Institute confirma que os pais descobrem que o diagnóstico estava errado e que Jonas é surdo. O filme se passa em um contexto de forte valorização do oralismo. Não apresente essa história como retrato universal das pessoas surdas.</aside>
 </section>
