@@ -1484,6 +1484,451 @@
     object-fit: cover;
   }
 
+  
+  /* =========================================================
+     REVISÃO DE EQUILÍBRIO VISUAL
+     Fotografias voltam a ser fundos integrais; cartões deixam
+     de ser o padrão e ficam reservados a dados que pedem caixas.
+     ========================================================= */
+
+  /* Recupera as fotografias de fundo nos slides que tinham sido
+     convertidos em painéis laterais. O fundo ocupa a tela toda. */
+  .reveal .slides section.slide-04::before,
+  .reveal .slides section.slide-05::before,
+  .reveal .slides section.slide-07::before,
+  .reveal .slides section.slide-08::before,
+  .reveal .slides section.slide-11::before,
+  .reveal .slides section.slide-12::before,
+  .reveal .slides section.slide-14::before {
+    background-image: var(--hero-image) !important;
+    opacity: 1 !important;
+  }
+  .reveal .slides section.slide-04::after,
+  .reveal .slides section.slide-05::after,
+  .reveal .slides section.slide-07::after,
+  .reveal .slides section.slide-08::after,
+  .reveal .slides section.slide-11::after,
+  .reveal .slides section.slide-12::after,
+  .reveal .slides section.slide-14::after {
+    background:
+      linear-gradient(90deg, rgba(5,5,6,.94) 0%, rgba(5,5,6,.84) 44%, rgba(5,5,6,.48) 100%),
+      linear-gradient(0deg, rgba(5,5,6,.72) 0%, rgba(5,5,6,.10) 72%, rgba(5,5,6,.28) 100%) !important;
+  }
+
+  /* As imagens incorporadas deixam de duplicar o fundo. */
+  .reveal .slides section.slide-04 .image-frame,
+  .reveal .slides section.slide-08 .image-frame,
+  .reveal .slides section.slide-04 .photo,
+  .reveal .slides section.slide-05 .photo,
+  .reveal .slides section.slide-07 .photo,
+  .reveal .slides section.slide-08 .photo,
+  .reveal .slides section.slide-11 .photo,
+  .reveal .slides section.slide-12 .photo,
+  .reveal .slides section.slide-14 .photo,
+  .reveal .slides section.slide-04 .photo-caption,
+  .reveal .slides section.slide-05 .photo-caption,
+  .reveal .slides section.slide-07 .photo-caption,
+  .reveal .slides section.slide-08 .photo-caption,
+  .reveal .slides section.slide-11 .photo-caption,
+  .reveal .slides section.slide-12 .photo-caption,
+  .reveal .slides section.slide-14 .photo-caption {
+    display: none !important;
+  }
+
+  /* SLIDE 2 — duas perspectivas abertas + síntese horizontal.
+     Sem cartões, sem grande coluna vazia e com o fundo fotográfico legível. */
+  .reveal .slides section.slide-02::after {
+    background:
+      linear-gradient(90deg, rgba(5,5,6,.91) 0%, rgba(5,5,6,.82) 52%, rgba(5,5,6,.67) 100%),
+      linear-gradient(0deg, rgba(5,5,6,.76) 0%, rgba(5,5,6,.16) 100%) !important;
+  }
+  .reveal .slides section.slide-02 .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(42px, 6vw, 92px);
+    margin-top: clamp(44px, 6vh, 68px);
+  }
+  .reveal .slides section.slide-02 .comparison-item {
+    min-width: 0;
+    padding-top: 24px;
+    border-top: 2px solid rgba(255,255,255,.58);
+  }
+  .reveal .slides section.slide-02 .comparison-item .num {
+    font-size: .67em;
+    color: rgba(255,255,255,.68);
+    letter-spacing: .15em;
+    margin-bottom: 18px;
+  }
+  .reveal .slides section.slide-02 .comparison-item h3 {
+    font-size: 1.58em;
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+  .reveal .slides section.slide-02 .comparison-item p {
+    max-width: 650px;
+    font-size: 1.02em;
+    line-height: 1.42;
+    margin: 0;
+  }
+  .reveal .slides section.slide-02 .thesis {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(26px, 4vw, 60px);
+    margin-top: clamp(44px, 6vh, 68px);
+    padding-top: 26px;
+    border-top: 1px solid rgba(255,255,255,.28);
+  }
+  .reveal .slides section.slide-02 .thesis-main { max-width: 1260px; }
+  .reveal .slides section.slide-02 .thesis .lead {
+    font-size: 1.28em !important;
+    line-height: 1.24 !important;
+    margin-bottom: 12px;
+  }
+  .reveal .slides section.slide-02 .thesis .muted {
+    font-size: .92em;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .reveal .slides section.slide-02 .thesis-label {
+    display: inline-block;
+    max-width: 190px;
+    padding: 8px 0 8px 15px;
+    border-left: 2px solid rgba(255,255,255,.7);
+    color: rgba(255,255,255,.74);
+    font-size: .58em;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+
+  /* SLIDE 3 — comparação em duas colunas editoriais, não em dois bubbles. */
+  .reveal .slides section.slide-03 .layout-2 {
+    height: min(44vh, 420px);
+    gap: clamp(42px, 6vw, 90px);
+    margin-top: clamp(32px, 4vh, 50px) !important;
+  }
+  .reveal .slides section.slide-03 .layout-2 > div {
+    display: block;
+    padding: 8px 0 0 !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(255,255,255,.4) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .reveal .slides section.slide-03 .layout-2 > div:nth-child(2) {
+    padding-left: clamp(28px, 3vw, 48px) !important;
+    border-left: 1px solid rgba(255,255,255,.25) !important;
+    border-top: 1px solid rgba(255,255,255,.4) !important;
+  }
+  .reveal .slides section.slide-03 .layout-2 h3 { font-size: 1.56em; margin: 18px 0 22px; }
+  .reveal .slides section.slide-03 .list-clean li { font-size: 1em !important; margin-bottom: 15px; }
+  .reveal .slides section.slide-03 > .lead {
+    max-width: 1350px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    font-size: 1.22em !important;
+  }
+
+  /* SLIDE 4 — volta ao fundo fotográfico integral. Texto concentrado
+     à esquerda; a fotografia permanece visível no lado direito. */
+  .reveal .slides section.slide-04 .columns {
+    display: block !important;
+    height: calc(100% - 130px);
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child {
+    max-width: min(820px, 59%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+  }
+  .reveal .slides section.slide-04 h2 { max-width: 930px; }
+  .reveal .slides section.slide-04 .quote {
+    max-width: 100%;
+    font-size: 1.43em;
+    line-height: 1.25;
+  }
+  .reveal .slides section.slide-04 .list-clean li {
+    font-size: .98em !important;
+    margin-bottom: 14px;
+  }
+
+  /* SLIDE 5 — dois relatos sem caixas; o fundo histórico atravessa a tela. */
+  .reveal .slides section.slide-05 .layout-2 {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+    gap: clamp(38px, 5vw, 76px);
+    align-items: center;
+    height: calc(100% - 138px);
+  }
+  .reveal .slides section.slide-05 .layout-2 > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(26px, 3vw, 46px);
+  }
+  .reveal .slides section.slide-05 .card {
+    height: auto;
+    margin: 0 !important;
+    padding: 18px 0 0 !important;
+    border: 0 !important;
+    border-top: 2px solid rgba(255,255,255,.56) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-05 .card h3 { font-size: 1.24em; }
+  .reveal .slides section.slide-05 .card p { font-size: .94em; line-height: 1.42; }
+  .reveal .slides section.slide-05 .layout-2 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding-left: clamp(26px, 3vw, 46px);
+    border-left: 1px solid rgba(255,255,255,.3);
+  }
+  .reveal .slides section.slide-05 .layout-2 > div:nth-child(2) .small {
+    font-size: 1.08em !important;
+    line-height: 1.45;
+    color: rgba(255,255,255,.9) !important;
+  }
+
+  /* SLIDE 6 — sequência em três colunas abertas. */
+  .reveal .slides section.slide-06 .layout-3 { gap: 0; }
+  .reveal .slides section.slide-06 .card {
+    height: 100%;
+    padding: 16px clamp(24px, 3vw, 44px) 10px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-06 .card + .card {
+    border-left: 1px solid rgba(255,255,255,.28) !important;
+  }
+  .reveal .slides section.slide-06 .card .num { font-size: .82em; margin-bottom: 22px; }
+  .reveal .slides section.slide-06 .card h3 { font-size: 1.48em; }
+  .reveal .slides section.slide-06 .card p { font-size: .98em; line-height: 1.43; }
+
+  /* SLIDE 7 — imagem histórica como fundo amplo; texto sem quadro lateral. */
+  .reveal .slides section.slide-07 .layout-2 { display: block !important; height: calc(100% - 130px); }
+  .reveal .slides section.slide-07 .layout-2 > div:first-child { max-width: min(880px, 64%); }
+  .reveal .slides section.slide-07 .layout-2 > div:nth-child(2) { display: none !important; }
+  .reveal .slides section.slide-07 .lead { font-size: 1.42em !important; line-height: 1.24 !important; }
+  .reveal .slides section.slide-07 .list-clean li { font-size: 1.02em !important; margin-bottom: 16px; }
+
+  /* SLIDE 8 — Bell e o argumento histórico em hierarquia aberta. */
+  .reveal .slides section.slide-08 .layout-2 { display: block !important; height: calc(100% - 130px); }
+  .reveal .slides section.slide-08 .layout-2 > div:first-child { max-width: min(980px, 68%); }
+  .reveal .slides section.slide-08 .layout-2 > div:first-child > p { font-size: 1.02em; line-height: 1.43; }
+  .reveal .slides section.slide-08 .card {
+    margin: 24px 0 !important;
+    padding: 14px 0 14px 24px !important;
+    border: 0 !important;
+    border-left: 3px solid rgba(255,255,255,.72) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-08 .card h3 { font-size: 1.42em; }
+  .reveal .slides section.slide-08 .card p { font-size: 1em; line-height: 1.42; }
+
+  /* SLIDE 9 — caixas mantidas apenas nos dados audiológicos. */
+  .reveal .slides section.slide-09 .stats .stat {
+    border: 1px solid rgba(255,255,255,.16);
+    background: rgba(8,8,9,.48) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(8px);
+  }
+  .reveal .slides section.slide-09 .diagram-row {
+    border: 0 !important;
+    border-left: 2px solid rgba(255,255,255,.42);
+    border-radius: 0 !important;
+    background: rgba(8,8,9,.26) !important;
+    box-shadow: none !important;
+  }
+
+  /* SLIDE 10 — tecnologia em duas entradas tipográficas abertas. */
+  .reveal .slides section.slide-10 .layout-2 > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 3vw, 44px);
+    align-items: start;
+  }
+  .reveal .slides section.slide-10 .card {
+    margin: 0 !important;
+    padding: 20px 0 0 !important;
+    border: 0 !important;
+    border-top: 2px solid rgba(255,255,255,.52) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-10 .card h3 { font-size: 1.28em; }
+  .reveal .slides section.slide-10 .card p { font-size: .96em; line-height: 1.43; }
+  .reveal .slides section.slide-10 .layout-2 > div:nth-child(2) {
+    padding-left: clamp(24px, 3vw, 44px);
+    border-left: 1px solid rgba(255,255,255,.26);
+  }
+  .reveal .slides section.slide-10 .lead { font-size: 1.35em !important; line-height: 1.24 !important; }
+  .reveal .slides section.slide-10 .quote { font-size: 1.12em !important; }
+
+  /* SLIDE 11 — texto e fundo visual; referências em uma linha simples. */
+  .reveal .slides section.slide-11 .layout-2 { display: block !important; height: calc(100% - 130px); }
+  .reveal .slides section.slide-11 .layout-2 > div:first-child { max-width: min(980px, 68%); }
+  .reveal .slides section.slide-11 .lead { font-size: 1.42em !important; line-height: 1.24 !important; }
+  .reveal .slides section.slide-11 .list-clean li { font-size: 1.02em !important; margin-bottom: 16px; }
+  .reveal .slides section.slide-11 .layout-2 > div:nth-child(2) { margin-top: 22px; }
+  .reveal .slides section.slide-11 .pill {
+    display: inline-block;
+    padding: 7px 0 7px 13px !important;
+    border: 0 !important;
+    border-left: 2px solid rgba(255,255,255,.62) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    font-size: .68em !important;
+    letter-spacing: .1em;
+  }
+
+  /* SLIDE 12 — still do filme como fundo de tela, texto à esquerda. */
+  .reveal .slides section.slide-12 .layout-2 { display: block !important; height: calc(100% - 145px); }
+  .reveal .slides section.slide-12 .layout-2 > div:first-child { max-width: min(980px, 68%); }
+  .reveal .slides section.slide-12 .layout-2 > div:nth-child(2) { display: none !important; }
+  .reveal .slides section.slide-12 > h2 { max-width: 1100px; font-size: 2.12em; }
+  .reveal .slides section.slide-12 .lead { font-size: 1.30em !important; line-height: 1.25 !important; }
+  .reveal .slides section.slide-12 .list-clean li { font-size: .98em !important; margin-bottom: 15px; }
+
+  /* SLIDE 13 — linha do tempo limpa, sem transformar cada etapa em cartão. */
+  .reveal .slides section.slide-13 .timeline {
+    gap: clamp(30px, 4vw, 60px);
+    margin: clamp(48px, 6vh, 70px) 0 28px;
+  }
+  .reveal .slides section.slide-13 .step {
+    min-height: 0;
+    padding: 64px 22px 12px 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .reveal .slides section.slide-13 .step + .step {
+    padding-left: clamp(20px, 2vw, 30px) !important;
+    border-left: 1px solid rgba(255,255,255,.25) !important;
+  }
+  .reveal .slides section.slide-13 .step:before { left: 0; }
+  .reveal .slides section.slide-13 .step + .step:before { left: clamp(20px, 2vw, 30px); }
+  .reveal .slides section.slide-13 .step h3 { font-size: 1.33em; margin-bottom: 18px; }
+  .reveal .slides section.slide-13 .step p { font-size: .99em; line-height: 1.43; }
+
+  /* SLIDE 14 — duas ressalvas em texto aberto, sem cartões. */
+  .reveal .slides section.slide-14 .layout-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    gap: clamp(38px, 5vw, 76px);
+  }
+  .reveal .slides section.slide-14 .layout-2 > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 34px;
+  }
+  .reveal .slides section.slide-14 .card {
+    margin: 0 !important;
+    padding: 16px 0 0 !important;
+    border: 0 !important;
+    border-top: 2px solid rgba(255,255,255,.55) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-14 .card p { font-size: 1.02em; line-height: 1.43; }
+  .reveal .slides section.slide-14 .layout-2 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding-left: clamp(28px, 3vw, 46px);
+    border-left: 1px solid rgba(255,255,255,.28);
+  }
+  .reveal .slides section.slide-14 .layout-2 > div:nth-child(2) > .small {
+    max-width: 540px;
+    font-size: 1.04em !important;
+    line-height: 1.48;
+  }
+
+  /* SLIDE 15 — texto legal tratado como citação editorial, não painel. */
+  .reveal .slides section.slide-15 .card {
+    padding: 16px 0 16px 28px !important;
+    border: 0 !important;
+    border-left: 3px solid rgba(255,255,255,.7) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-15 .card h3 { font-size: 1.62em; }
+  .reveal .slides section.slide-15 .card p { font-size: 1em; line-height: 1.45; }
+  .reveal .slides section.slide-15 .card .rule { background: rgba(255,255,255,.24) !important; }
+
+  /* SLIDE 16 — três teses em colunas abertas. */
+  .reveal .slides section.slide-16 .layout-3 { gap: 0; }
+  .reveal .slides section.slide-16 .card {
+    padding: 12px clamp(24px, 3vw, 44px) 10px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+  .reveal .slides section.slide-16 .card + .card {
+    border-left: 1px solid rgba(255,255,255,.28) !important;
+  }
+  .reveal .slides section.slide-16 .card .num { font-size: .85em; margin-bottom: 20px; }
+  .reveal .slides section.slide-16 .card h3 { font-size: 1.30em; }
+  .reveal .slides section.slide-16 .card p { font-size: .96em; line-height: 1.42; }
+  .reveal .slides section.slide-16 > .quote {
+    border-left-width: 3px !important;
+    max-width: 1400px;
+    font-size: 1.25em;
+  }
+
+  /* SLIDE 17 — bibliografia com divisão editorial discreta. */
+  .reveal .slides section.slide-17 .refs-grid > div:nth-child(2) {
+    padding-left: clamp(28px, 3vw, 46px);
+    border-left: 1px solid rgba(255,255,255,.25);
+  }
+  .reveal .slides section.slide-17 .references {
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    padding-bottom: 14px;
+    font-size: .70em !important;
+    line-height: 1.42 !important;
+  }
+
+  /* Mantém o layout confortável também em janelas menores. */
+  @media (max-height: 760px) {
+    .reveal .slides section.slide-02 .comparison-grid { margin-top: 28px; gap: 36px; }
+    .reveal .slides section.slide-02 .thesis { margin-top: 28px; }
+    .reveal .slides section.slide-04 .columns > div:first-child { max-width: 64%; }
+    .reveal .slides section.slide-06 .layout-3 { height: 31vh; }
+    .reveal .slides section.slide-13 .timeline { margin-top: 34px; }
+    .reveal .slides section.slide-16 .layout-3 { height: 27vh; }
+    .reveal .slides section.slide-17 .refs-grid { height: calc(100% - 126px); }
+  }
+  @media (max-width: 900px) {
+    .reveal .slides section.slide-02 .comparison-grid { gap: 28px; }
+    .reveal .slides section.slide-02 .thesis { grid-template-columns: 1fr; }
+    .reveal .slides section.slide-04 .columns > div:first-child,
+    .reveal .slides section.slide-07 .layout-2 > div:first-child,
+    .reveal .slides section.slide-08 .layout-2 > div:first-child,
+    .reveal .slides section.slide-11 .layout-2 > div:first-child,
+    .reveal .slides section.slide-12 .layout-2 > div:first-child { max-width: 100%; }
+    .reveal .slides section.slide-05 .layout-2 > div:first-child,
+    .reveal .slides section.slide-10 .layout-2 > div:first-child { grid-template-columns: 1fr; }
+  }
+
   </style>
 </head>
 <body>
@@ -1512,26 +1957,25 @@
 <section class="premium-slide balanced-text slide-02" style="--hero-image: url('https://cdn.helloasso.com/img/photos/evenements/croppedimage-a13252486b3440fba53b5949036d9f3c.png')">
   <div class="eyebrow">PONTO DE PARTIDA · P. 63–64</div>
   <h2>A surdez é um problema para quem?</h2>
-  <div class="layout-2">
-    <div>
-      <div class="card" style="border-top:5px solid var(--coral);margin-bottom:16px">
-        <div class="num">PERSPECTIVA PATOLÓGICA</div>
-        <h3>A diferença como falta</h3>
-        <p>O foco recai sobre a perda auditiva e sobre intervenções que aproximariam a pessoa de um padrão ouvinte.</p>
-      </div>
-      <div class="card" style="border-top:5px solid var(--teal)">
-        <div class="num">PERSPECTIVA CULTURAL</div>
-        <h3>A diferença como experiência</h3>
-        <p>O foco recai sobre a língua de sinais, a identidade, a comunidade e as condições de participação social.</p>
-      </div>
+  <div class="comparison-grid">
+    <div class="comparison-item pathology">
+      <div class="num">01 / PERSPECTIVA PATOLÓGICA</div>
+      <h3>A diferença como falta</h3>
+      <p>O foco recai sobre a perda auditiva e sobre intervenções que aproximariam a pessoa de um padrão ouvinte.</p>
     </div>
-    <div>
-      <p class="lead">Gesser desloca a pergunta: em vez de perguntar apenas o que falta à pessoa surda, é preciso observar o que a sociedade deixa de oferecer.</p>
-      <p class="muted">Quando há acesso à língua, aos pares e aos direitos, a surdez pode ser vivida de maneira positiva e afirmativa.</p>
-      <span class="pill">Ideia central do capítulo</span>
+    <div class="comparison-item culture">
+      <div class="num">02 / PERSPECTIVA CULTURAL</div>
+      <h3>A diferença como experiência</h3>
+      <p>O foco recai sobre a língua de sinais, a identidade, a comunidade e as condições de participação social.</p>
     </div>
   </div>
-  
+  <div class="thesis">
+    <div class="thesis-main">
+      <p class="lead">Gesser desloca a pergunta: em vez de perguntar apenas o que falta à pessoa surda, é preciso observar o que a sociedade deixa de oferecer.</p>
+      <p class="muted">Quando há acesso à língua, aos pares e aos direitos, a surdez pode ser vivida de maneira positiva e afirmativa.</p>
+    </div>
+    <span class="thesis-label">Ideia central do capítulo</span>
+  </div>
   <aside class="notes">A autora apresenta duas grandes formas de conceber a surdez: patologicamente ou culturalmente. O livro assume uma postura crítica à medicalização como explicação exclusiva e à ideia de que a pessoa surda precisa tornar-se “normal” para pertencer à sociedade. Não se trata de negar a dimensão audiológica, mas de questionar sua transformação em destino social.</aside>
 </section>
 
