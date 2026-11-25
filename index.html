@@ -138,7 +138,8 @@
   .reveal { color: var(--premium-white) !important; background: var(--premium-black) !important; }
   .reveal .slides { text-align: left; }
   .reveal .slides section.premium-slide {
-    position: relative;
+    /* Reveal.js posiciona cada slide em absolute; relative fazia os slides empilharem na página. */
+    position: absolute;
     isolation: isolate;
     height: 100%;
     padding: 64px 82px 66px !important;
@@ -782,6 +783,24 @@
   }
 
   
+
+  /* Reveal.js ocupa a janela inteira; cada seção permanece sobre a mesma tela. */
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  .reveal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+  }
+  .reveal .slides > section.premium-slide {
+    position: absolute !important;
+  }
+
   /* Capa simplificada: título em uma linha e sem imagem do livro */
   .reveal .slides section.premium-slide.cover > .cover-main {
     grid-template-columns: minmax(0, 1fr) !important;
@@ -1244,8 +1263,9 @@
       }
 
       if (hasOverflow()) {
-        // Último recurso: conteúdo permanece acessível, sem ser cortado ou sobreposto.
-        slide.style.overflowY = 'auto';
+        // Slides de apresentação não devem criar rolagem interna.
+        // Mantém o enquadramento fixo do Reveal.js; eventuais excessos são tratados no layout.
+        slide.style.overflowY = 'hidden';
       }
     });
   }
