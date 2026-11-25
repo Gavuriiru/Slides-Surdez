@@ -2237,6 +2237,139 @@
     padding: 0 !important;
   }
 
+  
+  /* =========================================================
+     AJUSTE DE EIXO E DISTRIBUIÇÃO VERTICAL
+     Slides 4 e 7: conteúdo alinhado por uma mesma margem e
+     distribuído no espaço útil em vez de ficar agrupado no topo.
+     ========================================================= */
+
+  /* SLIDE 4 — Ouvintismo
+     Citação, explicação e lista passam a compartilhar o eixo do título.
+     A citação deixa de ter recuo lateral próprio. */
+  .reveal .slides section.slide-04 > h2 {
+    max-width: 1120px !important;
+    margin-bottom: 0 !important;
+  }
+  .reveal .slides section.slide-04 .columns {
+    height: calc(100% - 136px) !important;
+    margin-top: clamp(18px, 2.5vh, 30px);
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child {
+    display: grid !important;
+    grid-template-rows: auto auto 1fr;
+    align-content: stretch;
+    justify-content: stretch;
+    align-items: start;
+    width: min(100%, 980px);
+    max-width: min(980px, 67%) !important;
+    min-height: 0 !important;
+    height: 100%;
+    padding: 16px 0 22px;
+    row-gap: 0;
+  }
+  .reveal .slides section.slide-04 .quote {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 1.38em !important;
+    line-height: 1.28 !important;
+    letter-spacing: -.02em;
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child > p.small {
+    max-width: 780px;
+    margin: 15px 0 0 !important;
+    padding: 0 !important;
+    font-size: .68em !important;
+    line-height: 1.42 !important;
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child > .list-clean {
+    align-self: end;
+    width: 100%;
+    margin: clamp(30px, 4vh, 52px) 0 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-04 .list-clean li {
+    margin: 0 0 clamp(16px, 2.2vh, 24px) !important;
+    font-size: 1em !important;
+    line-height: 1.4 !important;
+  }
+  .reveal .slides section.slide-04 .list-clean li:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* SLIDE 7 — Martha's Vineyard
+     Introdução no alto, fatos distribuídos no centro e leitura de
+     Gesser fechando o bloco perto do limite inferior do conteúdo. */
+  .reveal .slides section.slide-07 > h2 {
+    max-width: 1180px !important;
+    margin-bottom: 0 !important;
+  }
+  .reveal .slides section.slide-07 .layout-2 {
+    display: block !important;
+    height: calc(100% - 136px) !important;
+    margin-top: clamp(18px, 2.5vh, 30px);
+  }
+  .reveal .slides section.slide-07 .layout-2 > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-items: stretch;
+    width: min(100%, 980px);
+    max-width: min(980px, 66%) !important;
+    height: 100%;
+    min-height: 0 !important;
+    padding: 12px 0 24px;
+  }
+  .reveal .slides section.slide-07 .lead {
+    max-width: 900px;
+    margin: 0 !important;
+    font-size: 1.42em !important;
+    line-height: 1.26 !important;
+  }
+  .reveal .slides section.slide-07 .list-clean {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: clamp(14px, 2.4vh, 26px);
+    width: 100%;
+    margin: clamp(24px, 3.6vh, 42px) 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-07 .list-clean li {
+    margin: 0 !important;
+    font-size: 1.04em !important;
+    line-height: 1.43 !important;
+  }
+  .reveal .slides section.slide-07 .small {
+    max-width: 880px;
+    margin: 0 !important;
+    padding-top: clamp(18px, 2.5vh, 28px);
+    border-top: 1px solid rgba(255,255,255,.20);
+    font-size: .88em !important;
+    line-height: 1.45 !important;
+  }
+
+  @media (max-height: 760px) {
+    .reveal .slides section.slide-04 .columns,
+    .reveal .slides section.slide-07 .layout-2 {
+      height: calc(100% - 118px) !important;
+    }
+    .reveal .slides section.slide-07 .list-clean {
+      margin: 20px 0 !important;
+      gap: 12px;
+    }
+  }
+  @media (max-width: 900px) {
+    .reveal .slides section.slide-04 .columns > div:first-child,
+    .reveal .slides section.slide-07 .layout-2 > div:first-child {
+      max-width: 100% !important;
+    }
+  }
+
   </style>
 </head>
 <body>
