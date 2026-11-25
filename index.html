@@ -790,12 +790,19 @@
     height: 100%;
     margin: 0 !important;
     overflow: hidden !important;
+    background: #070708 !important;
+  }
+  .reveal-viewport {
+    width: 100%;
+    height: 100%;
+    background: #070708 !important;
   }
   .reveal {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden !important;
+    background: #070708 !important;
   }
   .reveal .slides > section.premium-slide {
     position: absolute !important;
@@ -1282,11 +1289,12 @@
 
 
   Reveal.initialize({
-    width: 1600,
-    height: 900,
-    margin: 0.035,
-    minScale: 0.2,
-    maxScale: 1.15,
+    // Usa toda a janela como área do slide, sem uma moldura 16:9 menor.
+    width: "100%",
+    height: "100%",
+    margin: 0,
+    minScale: 1,
+    maxScale: 1,
     hash: true,
     controls: true,
     progress: true,
