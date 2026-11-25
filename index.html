@@ -2370,6 +2370,449 @@
     }
   }
 
+  
+  /* =========================================================
+     LAYOUT POR ALTURA REAL DO SLIDE
+     O slide inteiro organiza cabeçalho + corpo flexível.
+     É o padrão dos slides 8 e 14 aplicado aos que ainda
+     estavam deixando o conteúdo preso no topo.
+     ========================================================= */
+
+  /* Estrutura comum: cabeçalho natural e corpo usando o espaço restante. */
+  .reveal .slides section.slide-03,
+  .reveal .slides section.slide-04,
+  .reveal .slides section.slide-06,
+  .reveal .slides section.slide-07,
+  .reveal .slides section.slide-08,
+  .reveal .slides section.slide-11,
+  .reveal .slides section.slide-12,
+  .reveal .slides section.slide-13,
+  .reveal .slides section.slide-14,
+  .reveal .slides section.slide-15,
+  .reveal .slides section.slide-16,
+  .reveal .slides section.slide-17 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .reveal .slides section.slide-03 > .eyebrow,
+  .reveal .slides section.slide-04 > .eyebrow,
+  .reveal .slides section.slide-06 > .eyebrow,
+  .reveal .slides section.slide-07 > .eyebrow,
+  .reveal .slides section.slide-08 > .eyebrow,
+  .reveal .slides section.slide-11 > .eyebrow,
+  .reveal .slides section.slide-12 > .eyebrow,
+  .reveal .slides section.slide-13 > .eyebrow,
+  .reveal .slides section.slide-14 > .eyebrow,
+  .reveal .slides section.slide-15 > .eyebrow,
+  .reveal .slides section.slide-16 > .eyebrow,
+  .reveal .slides section.slide-17 > .eyebrow {
+    flex: 0 0 auto;
+    margin-bottom: 16px !important;
+  }
+  .reveal .slides section.slide-03 > h2,
+  .reveal .slides section.slide-04 > h2,
+  .reveal .slides section.slide-06 > h2,
+  .reveal .slides section.slide-07 > h2,
+  .reveal .slides section.slide-08 > h2,
+  .reveal .slides section.slide-11 > h2,
+  .reveal .slides section.slide-12 > h2,
+  .reveal .slides section.slide-13 > h2,
+  .reveal .slides section.slide-14 > h2,
+  .reveal .slides section.slide-15 > h2,
+  .reveal .slides section.slide-16 > h2,
+  .reveal .slides section.slide-17 > h2 {
+    flex: 0 0 auto;
+    margin: 0 0 clamp(18px, 2.5vh, 30px) !important;
+  }
+
+  /* SLIDE 3 — as duas perspectivas ocupam igualmente o espaço central. */
+  .reveal .slides section.slide-03 > .layout-2 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: stretch;
+  }
+  .reveal .slides section.slide-03 > .layout-2 > div {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+  .reveal .slides section.slide-03 > .lead {
+    flex: 0 0 auto;
+    margin: clamp(20px, 3vh, 34px) 0 0 !important;
+  }
+
+  /* SLIDE 4 — conteúdo como bloco único, com eixo comum ao título.
+     O espaço é usado pelo conjunto; nenhum item fica preso ao rodapé. */
+  .reveal .slides section.slide-04 > .columns {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    height: auto !important;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-04 > .columns > div:first-child {
+    display: flex !important;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: min(100%, 980px);
+    max-width: min(980px, 68%) !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    gap: clamp(16px, 2.3vh, 25px);
+  }
+  .reveal .slides section.slide-04 > .columns > .image-frame {
+    display: none !important;
+  }
+  .reveal .slides section.slide-04 .quote {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    max-width: 100% !important;
+    font-size: 1.40em !important;
+    line-height: 1.27 !important;
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child > p.small {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 820px;
+    font-size: .72em !important;
+    line-height: 1.42 !important;
+  }
+  .reveal .slides section.slide-04 .columns > div:first-child > .list-clean {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px, 1.8vh, 20px);
+    margin: clamp(6px, 1vh, 12px) 0 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-04 .list-clean li {
+    margin: 0 !important;
+    font-size: 1em !important;
+    line-height: 1.42 !important;
+  }
+
+  /* SLIDE 6 — as três etapas crescem juntas no espaço entre a tese e a síntese. */
+  .reveal .slides section.slide-06 > .lead {
+    flex: 0 0 auto;
+    max-width: 1320px !important;
+    margin: 0 0 clamp(20px, 3vh, 34px) !important;
+  }
+  .reveal .slides section.slide-06 > .layout-3 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: stretch;
+  }
+  .reveal .slides section.slide-06 > .layout-3 .card {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .reveal .slides section.slide-06 > .rule {
+    flex: 0 0 auto;
+    margin: clamp(18px, 2.5vh, 28px) 0 !important;
+  }
+  .reveal .slides section.slide-06 > .muted {
+    flex: 0 0 auto;
+    max-width: 1400px;
+    margin: 0 !important;
+  }
+
+  /* SLIDE 7 — mesmo princípio do slide 8: uma coluna de texto
+     com largura controlada, centralizada no corpo disponível. */
+  .reveal .slides section.slide-07 > .layout-2 {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-07 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: clamp(22px, 3vh, 36px);
+    width: min(100%, 980px);
+    max-width: min(980px, 68%) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-07 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-07 .lead {
+    max-width: 900px;
+    margin: 0 !important;
+    font-size: 1.40em !important;
+    line-height: 1.26 !important;
+  }
+  .reveal .slides section.slide-07 .list-clean {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: clamp(17px, 2.3vh, 26px);
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .reveal .slides section.slide-07 .list-clean li {
+    margin: 0 !important;
+    font-size: 1.02em !important;
+    line-height: 1.42 !important;
+  }
+  .reveal .slides section.slide-07 .small {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 900px;
+    font-size: .90em !important;
+    line-height: 1.45 !important;
+  }
+
+  /* SLIDE 8 — referência de coluna: mesmo centro vertical e largura
+     do conteúdo; a composição original deste slide é preservada. */
+  .reveal .slides section.slide-08 > .layout-2 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(18px, 2.4vh, 28px);
+    width: min(100%, 980px);
+    max-width: min(980px, 68%) !important;
+    min-height: 0;
+    height: auto;
+  }
+  .reveal .slides section.slide-08 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-08 .card {
+    margin: 0 !important;
+  }
+
+  /* SLIDE 11 — tese e lista centralizadas no corpo, sem subir para o topo. */
+  .reveal .slides section.slide-11 > .layout-2 {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-11 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(20px, 2.7vh, 32px);
+    width: min(100%, 980px);
+    max-width: min(980px, 68%) !important;
+    min-height: 0;
+    height: auto;
+  }
+  .reveal .slides section.slide-11 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-11 .lead {
+    margin: 0 !important;
+    font-size: 1.40em !important;
+  }
+  .reveal .slides section.slide-11 .list-clean {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2vh, 22px);
+  }
+  .reveal .slides section.slide-11 .list-clean li {
+    margin: 0 !important;
+  }
+
+  /* SLIDE 12 — premissa, três acontecimentos e ficha do filme
+     tratados como uma única coluna vertical equilibrada. */
+  .reveal .slides section.slide-12 > .layout-2 {
+    display: flex !important;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(18px, 2.3vh, 28px);
+    width: min(100%, 980px);
+    max-width: min(980px, 68%) !important;
+    min-height: 0;
+    height: auto;
+  }
+  .reveal .slides section.slide-12 > .layout-2 > div:nth-child(2) {
+    display: none !important;
+  }
+  .reveal .slides section.slide-12 .lead,
+  .reveal .slides section.slide-12 .small {
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-12 .list-clean {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2vh, 22px);
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-12 .list-clean li {
+    margin: 0 !important;
+  }
+
+  /* SLIDE 13 — a linha do tempo ocupa o miolo; a conclusão fecha abaixo. */
+  .reveal .slides section.slide-13 > .timeline {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    display: grid;
+    align-items: center;
+    margin: 0 !important;
+    padding-top: clamp(24px, 3.5vh, 42px);
+  }
+  .reveal .slides section.slide-13 > .lead {
+    flex: 0 0 auto;
+    margin: clamp(22px, 3vh, 34px) 0 0 !important;
+  }
+
+  /* SLIDE 14 — exemplo de duas colunas: preserva o centro vertical
+     e usa o espaço restante sem esticar os cartões artificialmente. */
+  .reveal .slides section.slide-14 > .layout-2 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: center;
+  }
+  .reveal .slides section.slide-14 > .layout-2 > div:first-child {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(26px, 3.5vh, 42px);
+    height: auto;
+    min-height: 0;
+  }
+  .reveal .slides section.slide-14 > .layout-2 > div:nth-child(2) {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 0;
+  }
+
+  /* SLIDE 15 — alinha os dois lados pelo centro do espaço útil. */
+  .reveal .slides section.slide-15 > .layout-2 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: center;
+  }
+  .reveal .slides section.slide-15 > .layout-2 > div:first-child,
+  .reveal .slides section.slide-15 > .layout-2 > div:nth-child(2) {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 0;
+  }
+
+  /* SLIDE 16 — cartões e frase final dividem o corpo disponível. */
+  .reveal .slides section.slide-16 > .layout-3 {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: center;
+  }
+  .reveal .slides section.slide-16 > .layout-3 .card {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .reveal .slides section.slide-16 > .rule {
+    flex: 0 0 auto;
+    margin: clamp(18px, 2.5vh, 28px) 0 !important;
+  }
+  .reveal .slides section.slide-16 > .quote {
+    flex: 0 0 auto;
+    margin: 0 !important;
+  }
+  .reveal .slides section.slide-16 > .tagline {
+    flex: 0 0 auto;
+    margin-top: 18px !important;
+  }
+
+  /* SLIDE 17 — bibliografia distribui referências ao longo do corpo,
+     sem depender de altura fixa calculada em pixels. */
+  .reveal .slides section.slide-17 > .refs-grid {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    margin: 0 !important;
+    align-items: stretch;
+  }
+  .reveal .slides section.slide-17 > .refs-grid > div {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    gap: clamp(18px, 2.5vh, 30px);
+    min-height: 0;
+    height: 100%;
+  }
+  .reveal .slides section.slide-17 > .small {
+    flex: 0 0 auto;
+    margin-top: 18px !important;
+  }
+
+  @media (max-height: 760px) {
+    .reveal .slides section.slide-04 > .columns,
+    .reveal .slides section.slide-07 > .layout-2,
+    .reveal .slides section.slide-08 > .layout-2,
+    .reveal .slides section.slide-11 > .layout-2,
+    .reveal .slides section.slide-12 > .layout-2 {
+      min-height: 0;
+    }
+    .reveal .slides section.slide-04 > .columns > div:first-child,
+    .reveal .slides section.slide-07 > .layout-2 > div:first-child,
+    .reveal .slides section.slide-08 > .layout-2 > div:first-child,
+    .reveal .slides section.slide-11 > .layout-2 > div:first-child,
+    .reveal .slides section.slide-12 > .layout-2 > div:first-child {
+      gap: 15px;
+    }
+  }
+
   </style>
 </head>
 <body>
