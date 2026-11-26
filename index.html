@@ -3450,6 +3450,16 @@
   }
 
   </style>
+  <script>
+    // Ativa o layout de impressão do Reveal.js somente no modo de exportação PDF.
+    if (/(?:^|[?&])print-pdf(?:[=&]|$)/i.test(window.location.search)) {
+      const pdfStylesheet = document.createElement('link');
+      pdfStylesheet.rel = 'stylesheet';
+      pdfStylesheet.type = 'text/css';
+      pdfStylesheet.href = 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/print/pdf.css';
+      document.head.appendChild(pdfStylesheet);
+    }
+  </script>
 </head>
 <body>
 <div class="reveal">
@@ -3906,6 +3916,8 @@
     controls: true,
     progress: true,
     slideNumber: 'c/t',
+    pdfMaxPagesPerSlide: 1,
+    pdfSeparateFragments: false,
     controlsLayout: 'bottom-right',
     history: true,
     center: false,
